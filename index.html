@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Портфолио Варвары Кокиной — продуктовый и веб-дизайн.">
+    <title>Варвара Кокина — продуктовый и веб-дизайнер</title>
+    <link rel="preload" href="assets/fonts/geist-medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/geist-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
+    <script src="clients.js" defer></script>
+  </head>
+  <body>
+    <section class="intro" aria-labelledby="intro-title">
+      <header class="site-header container">
+        <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+          <span class="identity__portrait">
+            <img src="assets/images/avatar.png" alt="" width="32" height="32">
+          </span>
+          <span>Кокина Варвара</span>
+        </a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf" aria-label="Скачать CV Варвары Кокиной в PDF">
+            <img src="assets/images/plus.svg" alt="" width="7.712" height="7.712">cv
+          </a>
+          <button class="nav-link" type="button" disabled title="Раздел работ скоро появится">
+            <img src="assets/images/plus.svg" alt="" width="7.712" height="7.712">Работы
+          </button>
+        </nav>
+        <a class="nav-link" href="mailto:hirtyw@gmail.com">
+          <img src="assets/images/plus.svg" alt="" width="7.712" height="7.712">Связаться
+        </a>
+        <button class="nav-link menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+          <img src="assets/images/plus.svg" alt="" width="7.712" height="7.712"><span>Меню</span>
+        </button>
+      </header>
+      <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню">
+        <nav class="mobile-menu__links" aria-label="Мобильная навигация">
+          <button type="button" disabled title="Раздел работ скоро появится">+ Работы</button>
+          <a href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">+ CV</a>
+          <a href="mailto:hirtyw@gmail.com">+ Связаться</a>
+        </nav>
+      </dialog>
+      <main class="hero">
+        <h1 class="hero__title" id="intro-title">
+          <span class="hero__lead">Хороший дизайн<br>требует внимания.</span>
+          <span class="hero__message"><span class="hero__statement">Я отношусь серьезно</span> <span class="hero__ending">к работе<span class="hero__period">.</span></span></span>
+          <span class="hero__visual">
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/images/hero-project.png" width="3840" height="2160">
+              <img src="assets/images/head1.jpg" alt="" width="709" height="220" fetchpriority="high">
+            </picture>
+          </span>
+        </h1>
+        <dl class="hero__facts">
+          <div class="hero__fact">
+            <dt>Опыт работы</dt>
+            <dd>5+ лет</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Гражданство Россия, Израиль</dt>
+            <dd>Проживаю в Нижнем Новгороде</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Специлизация</dt>
+            <dd>Продукт и веб-дизайн</dd>
+          </div>
+        </dl>
+      </main>
+    </section>
+    <section class="clients container" aria-labelledby="clients-title">
+      <h2 id="clients-title">Работала с</h2>
+      <ul class="clients__logos" aria-label="Клиенты и компании" tabindex="0">
+        <li class="clients__domeo"><img src="assets/images/clients/domeo.svg" alt="Domeo" width="112.402" height="69.767" loading="lazy"></li>
+        <li class="clients__gymteam"><img src="assets/images/clients/gymteam.svg" alt="GymTeam" width="138.924" height="39.866" loading="lazy"></li>
+        <li class="clients__lazarev"><img src="assets/images/clients/lazarev.svg" alt="Sergey Nikolaevich Lazarev" width="176" height="72" loading="lazy"></li>
+        <li class="clients__neture"><img src="assets/images/clients/neture.svg" alt="Neture" width="171" height="32" loading="lazy"></li>
+        <li class="clients__valonti"><img src="assets/images/clients/valonti.svg" alt="Valonti" width="198" height="31" loading="lazy"></li>
+        <li class="clients__gen-group"><img src="assets/images/clients/gen-group.svg" alt="GEN-GROUP" width="248" height="44" loading="lazy"></li>
+        <li class="clients__estes"><img src="assets/images/clients/estes.svg" alt="Estes" width="176" height="38" loading="lazy"></li>
+        <li class="clients__domglass"><img src="assets/images/clients/domglass.svg" alt="DomGlass" width="202.071" height="33.578" loading="lazy"></li>
+      </ul>
+    </section>
+  </body>
+</html>
