@@ -263,7 +263,97 @@ button:focus-visible {
 .clients__valonti { --logo-width: 156px; --logo-height: 24.05px; grid-area: 2 / 3; }
 .clients__estes { --logo-width: 139px; --logo-height: 30px; grid-area: 2 / 4; }
 
+.about {
+  display: grid;
+  grid-template-columns: 35.75% minmax(0, 1fr);
+  gap: 40px 0;
+  padding-block: 75px;
+  color: var(--color-navigation);
+}
+
+.about__number,
+.about h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+}
+
+.about__portrait {
+  grid-row: 2 / 4;
+  align-self: start;
+  width: min(100%, 255.758px);
+  aspect-ratio: 258 / 334;
+  overflow: hidden;
+}
+
+.about__portrait img {
+  display: block;
+  width: 100%;
+  height: 102.99%;
+  object-fit: cover;
+  transform: translateY(-0.45%);
+}
+
+.about__copy {
+  max-width: 740px;
+}
+
+.about__copy h3 {
+  margin: 0 0 16px;
+  color: var(--color-text);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.about__copy p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+}
+
+.about__skills {
+  display: flex;
+  gap: 86px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.about__skills ul {
+  display: grid;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 @media (max-width: 1440px) {
+  .about {
+    grid-template-columns: 36.416667% minmax(0, 1fr);
+  }
+
+  .about__portrait {
+    width: min(100%, 218px);
+  }
+
+  .about__copy {
+    max-width: 655px;
+  }
+
+  .about__skills {
+    gap: 100px;
+    font-weight: 500;
+  }
+
+  .about__skills ul {
+    gap: 20px;
+  }
+
   .clients {
     --logo-scale: 1;
     background-position: left top, left bottom;
@@ -281,6 +371,40 @@ button:focus-visible {
 }
 
 @media (max-width: 1200px) {
+  .about {
+    grid-template-columns: 36.915888% minmax(0, 1fr);
+  }
+
+  .about__number,
+  .about h2 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+
+  .about__copy h3 {
+    letter-spacing: -0.05em;
+  }
+
+  .about__copy p {
+    max-width: 565px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .about__skills {
+    gap: 66px;
+    font-weight: 400;
+  }
+
+  .about__skills ul:first-child {
+    min-width: 132px;
+  }
+
+  .about__skills ul {
+    gap: 26px;
+  }
+
   .clients {
     --logo-scale: 1.08399;
   }
@@ -321,12 +445,70 @@ button:focus-visible {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .about__skills {
+    gap: clamp(16px, calc(11.574vw - 72.89px), 66px);
+    font-size: clamp(16px, 1.667vw, 20px);
+  }
+
   .clients {
     --logo-scale: clamp(0.6, calc(100vw / 1107px), 1.08399);
   }
 }
 
 @media (max-width: 767px) {
+  .about {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-block: 80px;
+    background: url("assets/images/clients-divider.svg") left bottom / 100% 1px no-repeat;
+  }
+
+  .about h2 {
+    justify-self: end;
+  }
+
+  .about__portrait {
+    grid-area: 2 / 1 / auto / -1;
+    width: min(100%, 261px);
+    margin-top: 46px;
+  }
+
+  .about__copy {
+    grid-column: 1 / -1;
+    margin-top: 33px;
+  }
+
+  .about__copy h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    letter-spacing: -0.03em;
+  }
+
+  .about__skills {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .about__skills ul {
+    gap: 9px;
+  }
+
+  .about__skills ul:first-child {
+    order: 1;
+    min-width: 0;
+    width: 37.3938%;
+    flex: none;
+  }
+
+  .about__skills ul:last-child {
+    min-width: 0;
+  }
+
   .clients {
     --logo-scale: 1.08399;
     width: calc(100% - 40px);
