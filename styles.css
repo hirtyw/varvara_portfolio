@@ -218,8 +218,8 @@ button:focus-visible {
 .clients {
   --logo-scale: 1.262944;
   padding-block: 110px;
-  background: url("assets/images/clients-divider.svg") center top / min(1194px, 100%) 1px no-repeat,
-    url("assets/images/clients-divider.svg") center bottom / min(1194px, 100%) 1px no-repeat;
+  background: url("assets/images/clients-divider.svg") center top / 100% 1px no-repeat,
+    url("assets/images/clients-divider.svg") center bottom / 100% 1px no-repeat;
 }
 
 .clients h2 {
@@ -267,6 +267,7 @@ button:focus-visible {
   .clients {
     --logo-scale: 1;
     background-position: left top, left bottom;
+    background-size: min(1194px, 100%) 1px;
   }
 
   .clients h2 {
