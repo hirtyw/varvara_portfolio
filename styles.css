@@ -124,11 +124,6 @@ button:focus-visible {
   flex: none;
 }
 
-.nav-link:disabled {
-  cursor: default;
-  opacity: 1;
-}
-
 .hero {
   width: min(var(--hero-width), calc(100% - var(--page-gutter) * 2));
   margin: 71px auto 0;
@@ -262,6 +257,82 @@ button:focus-visible {
 .clients__domglass { --logo-width: 160px; --logo-height: 26.5871px; grid-area: 2 / 2; }
 .clients__valonti { --logo-width: 156px; --logo-height: 24.05px; grid-area: 2 / 3; }
 .clients__estes { --logo-width: 139px; --logo-height: 30px; grid-area: 2 / 4; }
+.projects {
+  padding-block: 110px;
+  background: url("assets/images/clients-divider.svg") left top / 100% 1px no-repeat,
+    url("assets/images/clients-divider.svg") left bottom / 100% 1px no-repeat;
+  scroll-margin-top: 24px;
+}
+.projects__heading {
+  display: grid;
+  grid-template-columns: 33.625% 1fr;
+  margin-bottom: 40px;
+  color: var(--color-navigation);
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+}
+.projects__heading p,
+.projects__heading h2 {
+  margin: 0;
+  font: inherit;
+}
+.project {
+  display: grid;
+  grid-template-columns: 28.9375% minmax(0, 1fr);
+  column-gap: 6.8125%;
+}
+.project + .project { margin-top: 60px; }
+.project__copy h3 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.project__copy p {
+  margin: 0;
+  color: var(--color-navigation);
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+}
+.project__visual { position: relative; margin: 0; }
+.project__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: var(--media-ratio);
+  background: #e9e9e9;
+}
+.project__image img {
+  position: absolute;
+  left: var(--image-left);
+  top: var(--image-top);
+  width: var(--image-width);
+  height: var(--image-height);
+  object-fit: cover;
+}
+.project__visual figcaption {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.project__visual figcaption span {
+  display: block;
+  height: 26px;
+  padding: 2px 10px;
+  border: 1px solid rgb(29 29 29 / 10%);
+  border-radius: 132px;
+  background: #fff;
+  color: var(--color-navigation);
+  font-size: 10px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
 
 .about {
   display: grid;
@@ -682,15 +753,70 @@ button:focus-visible {
     letter-spacing: -2px;
   }
 
-  .mobile-menu__links button {
-    border: 0;
-    padding: 0;
-    background: none;
-    color: inherit;
-    text-align: left;
-    opacity: 1;
-  }
 }
+
+.project--furniture { --media-ratio: 1028 / 574; --image-left: 0%; --image-top: 0%; --image-width: 101.070039%; --image-height: 101.74216%; }
+.project--real-estate { --media-ratio: 1028 / 574; --image-left: 0%; --image-top: -1.74216%; --image-width: 100%; --image-height: 107.142857%; }
+.project--interiors { --media-ratio: 1028 / 574; --image-left: -2.431907%; --image-top: -2.787456%; --image-width: 104.961089%; --image-height: 105.749129%; }
+.project--cinema { --media-ratio: 1028 / 574; --image-left: 1.410506%; --image-top: 1.655052%; --image-width: 97.276265%; --image-height: 98.432056%; }
+.project--agency { --media-ratio: 1028 / 574; --image-left: -5.7393%; --image-top: -11.149826%; --image-width: 110.311284%; --image-height: 111.149826%; }
+.project--gamers { --media-ratio: 1028 / 574; --image-left: -3.404669%; --image-top: -3.832753%; --image-width: 105.933852%; --image-height: 106.794425%; }
+.project--audio { --media-ratio: 1028 / 574; --image-left: -1.750973%; --image-top: 0%; --image-width: 103.210117%; --image-height: 104.006969%; }
+.project--courses { --media-ratio: 1028 / 574; --image-left: 1.474708%; --image-top: 2.45993%; --image-width: 97.081712%; --image-height: 97.560976%; }
+.project--yandex { --media-ratio: 1028 / 574; --image-left: -16.14786%; --image-top: -14.111498%; --image-width: 119.844358%; --image-height: 120.731707%; }
+@media (max-width: 1440px) {
+  .projects__heading { grid-template-columns: 36.166667% 1fr; }
+  .project { grid-template-columns: 31.666667% minmax(0, 1fr); column-gap: 5%; }
+.project--furniture { --media-ratio: 760 / 427.5; --image-left: 0%; --image-top: 0%; --image-width: 106.973684%; --image-height: 106.900585%; }
+.project--real-estate { --media-ratio: 760 / 427.5; --image-left: -11.578947%; --image-top: -13.80117%; --image-width: 111.578947%; --image-height: 118.830409%; }
+.project--interiors { --media-ratio: 760 / 427.5; --image-left: -4.210526%; --image-top: 0%; --image-width: 113.947368%; --image-height: 113.918129%; }
+.project--cinema { --media-ratio: 760 / 427.5; --image-left: 0.064474%; --image-top: -0.119298%; --image-width: 99.962791%; --image-height: 100.40707%; }
+.project--agency { --media-ratio: 760 / 427.5; --image-left: -24.342105%; --image-top: -18.479532%; --image-width: 136.842105%; --image-height: 136.842105%; }
+.project--gamers { --media-ratio: 760 / 427.5; --image-left: -4.473684%; --image-top: -4.851462%; --image-width: 109.342105%; --image-height: 109.473684%; }
+.project--audio { --media-ratio: 760 / 427.5; --image-left: 0%; --image-top: 0%; --image-width: 100%; --image-height: 99.883041%; }
+.project--courses { --media-ratio: 760 / 427.5; --image-left: 0.160921%; --image-top: 0.753918%; --image-width: 99.757255%; --image-height: 99.512915%; }
+.project--yandex { --media-ratio: 760 / 427.5; --image-left: -36.447368%; --image-top: -18.245614%; --image-width: 144.736842%; --image-height: 144.795322%; }
+}
+@media (max-width: 1200px) {
+  .projects__heading { grid-template-columns: 36.82243% 1fr; font-size: 14px; font-weight: 500; line-height: 17px; }
+  .project { grid-template-columns: 31.121495% minmax(0, 1fr); column-gap: 5.794393%; }
+  .project--furniture { column-gap: 5.700935%; }
+  .project--real-estate { grid-template-columns: 30.934579% minmax(0, 1fr); column-gap: 5.607477%; }
+  .project--interiors { column-gap: 5.607477%; }
+  .project--cinema { column-gap: 5.514019%; }
+  .project__copy p { font-size: 14px; line-height: 17px; }
+.project--furniture { --media-ratio: 676 / 380; --image-left: 0%; --image-top: 0.034211%; --image-width: 100.147929%; --image-height: 100.263158%; }
+.project--real-estate { --media-ratio: 679 / 382; --image-left: -9.425626%; --image-top: -13.578534%; --image-width: 109.425626%; --image-height: 116.492147%; }
+.project--interiors { --media-ratio: 677 / 381; --image-left: -4.726736%; --image-top: 0%; --image-width: 127.917282%; --image-height: 127.821522%; }
+.project--cinema { --media-ratio: 678 / 381; --image-left: -0.239676%; --image-top: 3.279528%; --image-width: 100.71384%; --image-height: 101.261025%; }
+.project--agency { --media-ratio: 675 / 380; --image-left: -24.148148%; --image-top: -16.544737%; --image-width: 133.185185%; --image-height: 133.157895%; }
+.project--gamers { --media-ratio: 675 / 380; --image-left: -0.740741%; --image-top: -5.228947%; --image-width: 105.037037%; --image-height: 105%; }
+.project--audio { --media-ratio: 675 / 380; --image-left: -2.222222%; --image-top: -1.807895%; --image-width: 104.444444%; --image-height: 104.473684%; }
+.project--courses { --media-ratio: 675 / 380; --image-left: 1.47637%; --image-top: 1.341842%; --image-width: 97.174897%; --image-height: 96.857164%; }
+.project--yandex { --media-ratio: 675 / 380; --image-left: -38.666667%; --image-top: -15.228947%; --image-width: 143.703704%; --image-height: 143.684211%; }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+  .project__copy h3 { font-size: 24px; }
+}
+@media (max-width: 767px) {
+  .projects { width: calc(100% - 40px); padding-block: 80px; background-image: url("assets/images/clients-divider.svg"); background-position: left bottom; }
+  .projects__heading { display: flex; justify-content: space-between; }
+  .project { display: block; }
+  .project + .project { margin-top: 40px; }
+  .project__copy h3 { margin-bottom: 12px; font-size: 26px; line-height: 25px; }
+  .project__visual { margin-top: 20px; }
+  .project__visual figcaption { position: static; flex-direction: row; flex-wrap: wrap; margin-top: 16px; }
+.project--furniture { --media-ratio: 353 / 204; --image-left: -1.699717%; --image-top: 0.104358%; --image-width: 103.399433%; --image-height: 100.490196%; }
+.project--real-estate { --media-ratio: 353 / 198; --image-left: -5.09915%; --image-top: -11.508636%; --image-width: 108.78187%; --image-height: 116.161616%; }
+.project--interiors { --media-ratio: 353 / 198; --image-left: -2.549575%; --image-top: 0.10752%; --image-width: 105.382436%; --image-height: 105.555556%; }
+.project--cinema { --media-ratio: 353 / 198; --image-left: 0.50255%; --image-top: 1.521662%; --image-width: 99.64778%; --image-height: 100.375007%; }
+.project--agency { --media-ratio: 353 / 199; --image-left: -13.031161%; --image-top: -11.450804%; --image-width: 116.997167%; --image-height: 117.085427%; }
+.project--gamers { --media-ratio: 353 / 199; --image-left: -4.532578%; --image-top: -4.918141%; --image-width: 109.348442%; --image-height: 109.045226%; }
+.project--audio { --media-ratio: 353 / 199; --image-left: -1.699717%; --image-top: -2.90809%; --image-width: 103.399433%; --image-height: 103.015075%; }
+.project--courses { --media-ratio: 353 / 199; --image-left: -0.298584%; --image-top: 0.582357%; --image-width: 100.940191%; --image-height: 100.471581%; }
+.project--yandex { --media-ratio: 353 / 199; --image-left: -3.116147%; --image-top: -6.425678%; --image-width: 106.734561%; --image-height: 106.556784%; }
+}
+
 
 @keyframes clients-loop {
   to { transform: translateX(calc(-1 * var(--clients-loop-distance))); }
