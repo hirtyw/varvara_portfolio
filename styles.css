@@ -999,6 +999,47 @@ button:focus-visible {
   to { transform: translateX(calc(-1 * var(--clients-loop-distance))); }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal="fade"] {
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal="fade"].is-visible {
+    opacity: 1;
+  }
+
+  [data-reveal="fade"]:focus-within {
+    opacity: 1;
+    transition: none;
+  }
+
+  [data-reveal="curtain"] {
+    position: relative;
+  }
+
+  [data-reveal="curtain"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: var(--color-background);
+    pointer-events: none;
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  [data-reveal="curtain"].is-visible::after {
+    transform: scaleY(0);
+  }
+}
+
+@media print {
+  [data-reveal="fade"] { opacity: 1; }
+  [data-reveal="curtain"]::after { display: none; }
+}
+
 @media (hover: hover) {
   .clients__logos:hover li {
     animation-play-state: paused;

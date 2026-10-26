@@ -6,7 +6,7 @@ const output = join(root, 'dist');
 
 await rm(output, { recursive: true, force: true });
 await mkdir(output);
-for (const file of ['index.html', 'styles.css', 'navigation.js', 'clients.js', 'assets']) {
+for (const file of ['index.html', 'styles.css', 'navigation.js', 'clients.js', 'reveal.js', 'assets']) {
   await cp(join(root, file), join(output, file), { recursive: true });
 }
 console.log('Static site built in dist/');
