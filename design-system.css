@@ -1,0 +1,250 @@
+/*
+ * Единая система сайта. Загружается перед styles.css.
+ * Меняйте значения здесь: компоненты используют эти переменные напрямую.
+ * Индивидуальное кадрирование превью находится в styles.css.
+ * Брейкпоинты: 1440, 1200, 767 px; дополнительные правила — для узких экранов.
+ */
+
+@font-face {
+  font-family: Geist;
+  src: url("assets/fonts/geist-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url("assets/fonts/geist-medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  /* Цвета по назначению */
+  --color-background: #fff;
+  --color-text: #1d1d1d;
+  --color-muted: #737373;
+  --color-heading-muted: #b8c0c5;
+  --color-surface: #e9e9e9;
+  --color-border: color-mix(in srgb, var(--color-text) 10%, transparent);
+  --color-divider: color-mix(in srgb, var(--color-heading-muted) 50%, transparent);
+
+  /* Шрифт и типографическая шкала */
+  --font-family: Geist, Arial, sans-serif;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --text-xs: 10px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-card: 28px;
+  --text-heading: 48px;
+  --text-display: 72px;
+  --text-heading-mobile: 32px;
+  --text-card-mobile: 26px;
+  --text-display-mobile: 40px;
+  --tracking-body: -0.01em;
+  --tracking-heading: -0.03em;
+  --tracking-display: -0.05em;
+  --leading-tight: 0.95;
+  --leading-normal: 1.2;
+
+  /* Общие типографические роли */
+  --body-size: var(--text-md);
+  --body-leading: 22px;
+  --label-size: var(--text-md);
+  --label-leading: 22px;
+  --label-weight: var(--weight-regular);
+  --heading-size: var(--text-heading);
+  --card-title-size: var(--text-card);
+  --card-title-leading: 1;
+  --job-title-size: var(--text-lg);
+  --job-title-leading: 24px;
+  --facts-size: var(--text-md);
+  --facts-weight: var(--weight-regular);
+  --skills-size: var(--text-lg);
+  --skills-leading: 24px;
+  --skills-weight: var(--weight-regular);
+  --about-heading-tracking: var(--tracking-heading);
+  --experience-heading-tracking: var(--tracking-heading);
+  --experience-heading-leading: 46px;
+
+  /* Шкала отступов: основа 4 px, 2 px — для мелких элементов */
+  --space-half: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-15: 60px;
+  --space-20: 80px;
+  --space-25: 100px;
+  --space-30: 120px;
+
+  /* Сетка: начало правой колонки общее для всех разделов */
+  --container-width: min(1600px, 83.333333vw);
+  --page-gutter: 32px;
+  --grid-content-start: 35.75%;
+  --grid-copy-width: 28.9375%;
+  --section-space: 110px;
+  --section-about-space: 75px;
+  --section-experience-start: 95px;
+  --section-experience-end: 95px;
+  --project-gap: var(--space-30);
+  --project-media-ratio: 1028 / 574;
+
+  /* Общие элементы */
+  --avatar-size: 32px;
+  --icon-size: 7.712px;
+  --control-size: 32px;
+  --nav-icon-gap: 5px;
+  --tag-height: 26px;
+  --radius-pill: 999px;
+  --line-width: 1px;
+  --focus-width: 2px;
+  --focus-offset: 6px;
+
+  /* Особенности композиции из макета */
+  --header-offset: var(--space-2);
+  --hero-width: 709px;
+  --hero-font-size: var(--text-display);
+  --hero-offset: 71px;
+  --intro-height: 788px;
+  --hero-image-height: 176px;
+  --hero-facts-gap: 45px;
+  --facts-column-width: 116px;
+  --facts-column-gap: 35px;
+  --clients-heading-gap: 45px;
+  --about-portrait-width: 255.758px;
+  --about-copy-width: 740px;
+  --about-body-width: 100%;
+  --skills-column-gap: 86px;
+  --skills-row-gap: 26px;
+  --experience-copy-width: 764px;
+  --experience-body-width: 100%;
+  --experience-role-width: none;
+  --experience-row-gap: 30px;
+  --experience-list-offset: 0px;
+
+  /* Движение */
+  --motion-fade-duration: 1s;
+  --motion-fade-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-curtain-duration: 0.9s;
+  --motion-curtain-easing: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --container-width: calc(54.166667vw + 420px);
+    --grid-content-start: 36.666667%;
+    --grid-copy-width: 31.666667%;
+    --project-media-ratio: 16 / 9;
+    --clients-heading-gap: var(--space-10);
+    --about-portrait-width: 218px;
+    --about-copy-width: 655px;
+    --skills-column-gap: var(--space-25);
+    --skills-row-gap: var(--space-5);
+    --skills-weight: var(--weight-medium);
+    --experience-heading-tracking: var(--tracking-display);
+    --experience-body-width: 565px;
+    --experience-role-width: 276px;
+    --section-experience-start: 100.75px;
+    --section-experience-end: 100.25px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --container-width: calc(100% - 130px);
+    --grid-content-start: 36.915888%;
+    --grid-copy-width: 31.121495%;
+    --project-media-ratio: 675 / 380;
+    --body-size: var(--text-sm);
+    --body-leading: 17px;
+    --label-size: var(--text-sm);
+    --label-leading: 17px;
+    --label-weight: var(--weight-medium);
+    --clients-heading-gap: 45px;
+    --about-heading-tracking: var(--tracking-display);
+    --about-body-width: 565px;
+    --skills-column-gap: 66px;
+    --skills-row-gap: 26px;
+    --skills-weight: var(--weight-regular);
+    --experience-body-width: 100%;
+    --section-experience-start: 101.125px;
+    --section-experience-end: 94.875px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --skills-column-gap: clamp(16px, calc(11.574vw - 72.89px), 66px);
+    --skills-size: clamp(16px, 1.667vw, 20px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  :root { --card-title-size: var(--text-xl); }
+}
+
+@media (min-width: 768px) and (max-width: 799px) {
+  :root {
+    --hero-font-size: 9vw;
+    --facts-size: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 20px;
+    --container-width: calc(100% - var(--page-gutter) * 2 - 1px);
+    --section-space: var(--space-20);
+    --section-about-space: var(--space-20);
+    --section-experience-start: var(--space-20);
+    --section-experience-end: var(--space-20);
+    --project-gap: var(--space-20);
+    --project-media-ratio: 353 / 199;
+    --heading-size: var(--text-heading-mobile);
+    --card-title-size: var(--text-card-mobile);
+    --card-title-leading: 25px;
+    --job-title-size: var(--text-base);
+    --job-title-leading: 19px;
+    --facts-size: var(--text-sm);
+    --facts-weight: var(--weight-medium);
+    --skills-size: var(--text-base);
+    --skills-leading: 19px;
+    --skills-column-gap: var(--space-5);
+    --skills-row-gap: 9px;
+    --about-heading-tracking: var(--tracking-heading);
+    --experience-heading-tracking: var(--tracking-heading);
+    --experience-heading-leading: 30px;
+    --header-offset: 13px;
+    --hero-width: 353px;
+    --hero-font-size: clamp(30px, 10.178117vw, var(--text-display-mobile));
+    --hero-offset: 96px;
+    --intro-height: 830px;
+    --hero-image-height: auto;
+    --hero-facts-gap: 46px;
+    --clients-heading-gap: var(--space-10);
+    --about-portrait-width: 261px;
+    --about-copy-width: 100%;
+    --about-body-width: 100%;
+    --experience-row-gap: var(--space-4);
+    --experience-list-offset: calc(-1 * var(--space-2));
+  }
+}
+
+@media (max-width: 374px) {
+  :root {
+    --facts-column-width: 105px;
+    --facts-column-gap: var(--space-4);
+  }
+}
