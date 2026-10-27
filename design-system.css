@@ -64,8 +64,8 @@
   --heading-size: var(--text-heading);
   --card-title-size: clamp(var(--text-card), calc(var(--text-card-wide) - (1920px - 100vw) * 0.014583333), var(--text-card-wide));
   --card-title-leading: 1;
-  --job-title-size: var(--text-lg);
-  --job-title-leading: 24px;
+  --job-title-size: var(--body-size);
+  --job-title-leading: var(--body-leading);
   --facts-size: var(--text-md);
   --facts-weight: var(--body-weight);
   --skills-size: var(--text-lg);
@@ -225,8 +225,6 @@
     --heading-size: var(--text-heading-mobile);
     --card-title-size: var(--text-card-mobile);
     --card-title-leading: 25px;
-    --job-title-size: var(--text-base);
-    --job-title-leading: 19px;
     --facts-size: var(--text-sm);
     --skills-size: var(--text-base);
     --skills-leading: 19px;

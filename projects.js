@@ -1,5 +1,5 @@
 const projects = document.querySelector('#projects');
-const projectHover = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+const projectHover = window.matchMedia('(min-width: 768px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
 let projectCursor;
 
 function hideProjectCursor() {
