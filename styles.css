@@ -9,6 +9,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family);
+  font-weight: var(--body-weight);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -356,6 +357,7 @@ button:focus-visible {
   background: var(--color-background);
   color: var(--color-text);
   font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
   line-height: 20px;
   text-transform: uppercase;
 }
@@ -732,6 +734,7 @@ button:focus-visible {
 .experience h2 {
   margin: 0;
   font: inherit;
+  font-weight: var(--label-weight);
 }
 
 .experience__intro,
@@ -778,7 +781,7 @@ button:focus-visible {
   max-width: 276px;
   margin: 0;
   font-size: var(--job-title-size);
-  font-weight: var(--weight-medium);
+  font-weight: var(--body-weight);
   line-height: var(--job-title-leading);
   letter-spacing: var(--tracking-body);
 }
@@ -790,17 +793,10 @@ button:focus-visible {
 }
 
 .experience__period {
+  color: var(--color-muted);
   grid-area: 1 / 2 / 3;
   align-self: start;
   text-align: right;
-}
-
-@media (max-width: 1200px) {
-  .experience__number,
-  .experience h2 {
-    font-weight: var(--label-weight);
-  }
-
 }
 
 @media (max-width: 767px) {
