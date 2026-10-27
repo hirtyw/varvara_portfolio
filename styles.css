@@ -12,6 +12,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p,
+dd {
+  text-wrap: pretty;
+}
+
+.about__copy h3,
+.project__copy h3,
+.experience__intro h3 {
+  text-wrap: balance;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -96,6 +107,7 @@ button:focus-visible {
   width: var(--icon-size);
   height: var(--icon-size);
   background: currentColor;
+  -webkit-mask: url("assets/images/plus.svg") center / contain no-repeat;
   mask: url("assets/images/plus.svg") center / contain no-repeat;
 }
 
@@ -265,6 +277,7 @@ button:focus-visible {
   font-weight: var(--weight-medium);
   line-height: var(--card-title-leading);
   letter-spacing: var(--tracking-heading);
+  overflow-wrap: anywhere;
 }
 .project__copy p {
   margin: 0;
@@ -362,6 +375,10 @@ button:focus-visible {
   font-size: var(--body-size);
   line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
+}
+
+.about__copy p + p {
+  margin-top: var(--space-4);
 }
 
 .about__skills {
@@ -662,6 +679,13 @@ button:focus-visible {
 .project--yandex { --image-left: -3.116147%; --image-top: -6.425678%; --image-width: 106.734561%; --image-height: 106.556784%; }
 }
 
+@media (min-width: 768px) and (max-width: 999px) {
+  .project {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-5);
+  }
+}
+
 .experience {
   display: grid;
   grid-template-columns: var(--grid-content-start) minmax(0, 1fr);
@@ -845,9 +869,21 @@ button:focus-visible {
   [data-reveal="fade"] { opacity: 1; }
   [data-reveal="curtain"]::after { display: none; }
   .project-cursor { display: none; }
+  .clients__logos,
+  .clients__logos.is-looping {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    width: 100%;
+    margin-inline: 0;
+    overflow: visible;
+  }
+  .clients__logos li,
+  .clients__logos.is-looping li { animation: none; }
+  .clients__logos [aria-hidden="true"] { display: none; }
 }
 
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+@media screen and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .project__copy,
   .project__visual {
     transition: opacity var(--motion-dim-duration);
@@ -876,7 +912,7 @@ button:focus-visible {
     background-size: 100% var(--line-width);
   }
 
-  .project__visual figcaption span {
+  .has-project-cursor .project__visual figcaption span {
     opacity: 0;
     transform: translateY(var(--motion-tag-offset));
     transition: opacity var(--motion-tag-duration) var(--motion-fade-easing),
@@ -921,7 +957,7 @@ button:focus-visible {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media screen and (hover: hover) and (pointer: fine) {
   .clients__logos:hover li {
     animation-play-state: paused;
   }

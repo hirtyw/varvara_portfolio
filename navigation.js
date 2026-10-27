@@ -25,10 +25,22 @@ menu.addEventListener('click', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && menu.open) {
+  if (!menu.open) return;
+  if (event.key === 'Escape') {
     menu.close();
     syncMenu();
     toggle.focus();
+  } else if (event.key === 'Tab') {
+    const controls = [document.querySelector('.identity'), toggle, ...menu.querySelectorAll('a')];
+    const first = controls[0];
+    const last = controls.at(-1);
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 });
 

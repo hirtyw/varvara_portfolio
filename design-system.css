@@ -61,7 +61,7 @@
   --label-leading: 22px;
   --label-weight: var(--weight-regular);
   --heading-size: var(--text-heading);
-  --card-title-size: var(--text-card-wide);
+  --card-title-size: clamp(var(--text-card), calc(var(--text-card-wide) - (1920px - 100vw) * 0.014583333), var(--text-card-wide));
   --card-title-leading: 1;
   --job-title-size: var(--text-lg);
   --job-title-leading: 24px;
@@ -200,11 +200,8 @@
   :root {
     --skills-column-gap: clamp(16px, calc(11.574vw - 72.89px), 66px);
     --skills-size: clamp(16px, 1.667vw, 20px);
+    --card-title-size: clamp(var(--text-xl), calc(var(--text-card) - (1200px - 100vw) * 0.02), var(--text-card));
   }
-}
-
-@media (min-width: 768px) and (max-width: 999px) {
-  :root { --card-title-size: var(--text-xl); }
 }
 
 @media (min-width: 768px) and (max-width: 799px) {

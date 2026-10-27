@@ -4,8 +4,15 @@
   "private": true,
   "description": "Портфолио Варвары Кокиной",
   "scripts": {
+    "typography": "node typography.mjs",
+    "prebuild": "npm run typography",
+    "predev": "npm run typography",
+    "prestart": "npm run typography",
     "build": "node build.mjs",
     "dev": "node server.mjs",
     "start": "node server.mjs"
+  },
+  "devDependencies": {
+    "typograf": "7.8.0"
   }
 }
