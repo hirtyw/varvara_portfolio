@@ -119,7 +119,7 @@
   --hero-font-size: var(--text-display);
   --hero-offset: 71px;
   --intro-height: 788px;
-  --hero-image-height: 176px;
+  --hero-image-height: 220px;
   --hero-facts-gap: 45px;
   --facts-column-width: 116px;
   --facts-column-gap: 35px;
@@ -140,6 +140,9 @@
   --motion-fade-easing: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-curtain-duration: 0.9s;
   --motion-curtain-easing: cubic-bezier(0.76, 0, 0.24, 1);
+  --motion-hero-duration: 1000ms;
+  --hero-slide-interval: 3000ms;
+  --hero-slide-fast-interval: 2000ms;
   --motion-project-duration: 0.7s;
   --motion-title-duration: 0.5s;
   --motion-dim-duration: 0.4s;
@@ -241,6 +244,7 @@
     --hero-offset: 96px;
     --intro-height: 830px;
     --hero-image-height: auto;
+    --motion-hero-duration: 1400ms;
     --hero-facts-gap: 46px;
     --clients-heading-gap: var(--space-10);
     --about-portrait-width: 208px;

@@ -143,19 +143,56 @@ button:focus-visible {
 }
 
 .hero__visual {
+  position: relative;
   order: 1;
   display: block;
   height: var(--hero-image-height);
   margin-top: var(--space-4);
   overflow: hidden;
+  padding: 0;
+  border: 0;
   background: var(--color-surface);
+  cursor: pointer;
 }
 
-.hero__visual img {
+.hero__visual:disabled {
+  cursor: default;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero__slide img {
   display: block;
-  width: 100%;
-  height: 220px;
+  position: absolute;
+  left: var(--hero-crop-left, 0%);
+  top: var(--hero-crop-top, 0%);
+  width: var(--hero-crop-width, 100%);
+  height: var(--hero-crop-height, 100%);
   object-fit: cover;
+}
+
+/* Image-fill geometry from the seven 709 × 220 frames in Figma. */
+.hero__slide--furniture { --hero-crop-top: -4.15%; --hero-crop-height: 180.85%; }
+.hero__slide--real-estate { --hero-crop-left: -29.19605%; --hero-crop-top: -50.45455%; --hero-crop-width: 129.19605%; --hero-crop-height: 249.09091%; }
+.hero__slide--interiors { --hero-crop-left: -1.83357%; --hero-crop-width: 103.66714%; --hero-crop-height: 188.18182%; }
+.hero__slide--agency { --hero-crop-left: -33.56841%; --hero-crop-top: -103.18182%; --hero-crop-width: 142.09653%; --hero-crop-height: 257.72727%; }
+.hero__slide--gamers { --hero-crop-left: -9.73202%; --hero-crop-top: -27.7983%; --hero-crop-width: 121.01551%; --hero-crop-height: 219.375%; }
+.hero__slide--conference { --hero-crop-left: -29.19605%; --hero-crop-top: -27.72727%; --hero-crop-width: 129.13359%; --hero-crop-height: 234.21575%; }
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .hero__slide.is-entering {
+    z-index: 1;
+    animation: hero-slide-in var(--motion-hero-duration) var(--motion-curtain-easing) both;
+  }
+}
+
+@keyframes hero-slide-in {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
 
 .hero__ending {
@@ -421,10 +458,6 @@ button:focus-visible {
     margin-inline: 0;
   }
 
-  .hero__visual img {
-    transform: translateY(-10px);
-  }
-
   .hero__period {
     display: inline;
   }
@@ -564,16 +597,14 @@ button:focus-visible {
 
   .hero__visual {
     aspect-ratio: 353 / 206.324;
-    position: relative;
   }
 
-  .hero__visual img {
-    position: absolute;
+  .hero__slide img {
     top: 0;
-    left: calc(50% - 0.13px);
-    width: 103.893484%;
-    height: auto;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center top;
   }
 
   .hero__facts {
