@@ -28,6 +28,7 @@
   --color-muted: #6b7280;
   --color-heading-muted: #9ca3af;
   --color-surface: #e9e9e9;
+  --footer-background: #000;
   --color-border: color-mix(in srgb, var(--color-text) 10%, transparent);
   --color-divider: color-mix(in srgb, #b8c0c5 50%, transparent);
 
@@ -65,15 +66,8 @@
   --heading-size: var(--text-heading);
   --card-title-size: clamp(var(--text-card), calc(var(--text-card-wide) - (1920px - 100vw) * 0.014583333), var(--text-card-wide));
   --card-title-leading: 1;
-  --job-title-size: var(--body-size);
-  --job-title-leading: var(--body-leading);
   --facts-size: var(--text-md);
-  --facts-weight: var(--body-weight);
   --skills-size: var(--text-lg);
-  --skills-leading: var(--body-leading);
-  --footer-background: #000;
-  --footer-padding: var(--space-4);
-  --skills-weight: var(--body-weight);
   --about-heading-tracking: var(--tracking-heading);
   --experience-heading-tracking: var(--tracking-heading);
   --experience-heading-leading: 46px;
@@ -89,7 +83,6 @@
   --space-6: 24px;
   --space-8: 32px;
   --space-10: 40px;
-  --space-15: 60px;
   --space-20: 80px;
   --space-25: 100px;
   --space-30: 120px;
@@ -100,9 +93,6 @@
   --grid-content-start: 35.75%;
   --grid-copy-width: 28.9375%;
   --section-space: 110px;
-  --section-about-space: 75px;
-  --section-experience-start: 95px;
-  --section-experience-end: 95px;
   --project-gap: var(--space-30);
   --project-media-ratio: 1028 / 574;
 
@@ -122,7 +112,6 @@
   --hero-width: 709px;
   --hero-font-size: var(--text-display);
   --hero-offset: 71px;
-  --intro-height: 788px;
   --hero-image-height: 220px;
   --hero-facts-gap: 45px;
   --facts-column-width: 116px;
@@ -140,6 +129,9 @@
   --experience-list-offset: 0px;
 
   /* Движение */
+  --motion-press-duration: 120ms;
+  --control-press-offset: -2px;
+  --motion-menu-duration: 400ms;
   --motion-fade-duration: 1s;
   --motion-fade-easing: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-curtain-duration: 0.9s;
@@ -174,8 +166,6 @@
     --experience-heading-tracking: var(--tracking-display);
     --experience-body-width: 565px;
     --experience-role-width: 276px;
-    --section-experience-start: 100.75px;
-    --section-experience-end: 100.25px;
   }
 }
 
@@ -194,8 +184,6 @@
     --skills-column-gap: 66px;
     --skills-row-gap: 26px;
     --experience-body-width: 100%;
-    --section-experience-start: 101.125px;
-    --section-experience-end: 94.875px;
   }
 }
 
@@ -219,9 +207,6 @@
     --page-gutter: 20px;
     --container-width: calc(100% - var(--page-gutter) * 2 - 1px);
     --section-space: var(--space-20);
-    --section-about-space: var(--space-20);
-    --section-experience-start: var(--space-20);
-    --section-experience-end: var(--space-20);
     --project-gap: var(--space-20);
     --project-media-ratio: 353 / 199;
     --heading-size: var(--text-heading-mobile);
@@ -238,7 +223,6 @@
     --hero-width: 353px;
     --hero-font-size: clamp(30px, 10.178117vw, var(--text-display-mobile));
     --hero-offset: 96px;
-    --intro-height: 830px;
     --hero-image-height: auto;
     --motion-hero-duration: 1400ms;
     --hero-facts-gap: 46px;

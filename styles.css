@@ -44,9 +44,16 @@ button:focus-visible {
   margin-inline: auto;
 }
 
+.clients,
+.about,
+.projects,
+.experience {
+  padding-block: var(--section-space);
+}
+
 .intro {
-  min-height: var(--intro-height);
   padding-top: var(--header-offset);
+  padding-bottom: var(--section-space);
 }
 
 .site-header {
@@ -54,7 +61,6 @@ button:focus-visible {
   align-items: center;
   justify-content: space-between;
   min-height: var(--control-size);
-  color: var(--color-text);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
   line-height: var(--leading-normal);
@@ -110,6 +116,23 @@ button:focus-visible {
   background: currentColor;
   -webkit-mask: url("assets/images/plus.svg") center / contain no-repeat;
   mask: url("assets/images/plus.svg") center / contain no-repeat;
+}
+
+.nav-link,
+.mobile-menu__links a {
+  transition: translate var(--motion-press-duration) ease-out;
+}
+
+.nav-link:active,
+.mobile-menu__links a:active {
+  translate: 0 var(--control-press-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .mobile-menu__links a {
+    transition: none;
+  }
 }
 
 .hero {
@@ -207,7 +230,6 @@ button:focus-visible {
   gap: var(--space-4);
   margin: var(--hero-facts-gap) 0 0;
   font-size: var(--facts-size);
-  font-weight: var(--facts-weight);
   line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
 }
@@ -237,14 +259,12 @@ button:focus-visible {
 
 .clients {
   --logo-scale: 1.262944;
-  padding-block: var(--section-space);
   background: linear-gradient(var(--color-divider), var(--color-divider)) center top / 100% var(--line-width) no-repeat,
     linear-gradient(var(--color-divider), var(--color-divider)) center bottom / 100% var(--line-width) no-repeat;
 }
 
 .clients h2 {
   margin: 0 0 var(--clients-heading-gap);
-  color: var(--color-text);
   font-size: var(--label-size);
   font-weight: var(--label-weight);
   line-height: var(--label-leading);
@@ -283,7 +303,6 @@ button:focus-visible {
 .clients__valonti { --logo-width: 156px; --logo-height: 24.05px; grid-area: 2 / 3; }
 .clients__estes { --logo-width: 139px; --logo-height: 30px; grid-area: 2 / 4; }
 .projects {
-  padding-block: var(--section-space);
   background: linear-gradient(var(--color-divider), var(--color-divider)) left top / 100% var(--line-width) no-repeat,
     linear-gradient(var(--color-divider), var(--color-divider)) left bottom / 100% var(--line-width) no-repeat;
   scroll-margin-top: var(--space-6);
@@ -293,7 +312,6 @@ button:focus-visible {
   display: grid;
   grid-template-columns: var(--grid-content-start) minmax(0, 1fr);
   margin-bottom: var(--space-10);
-  color: var(--color-text);
   font-size: var(--label-size);
   line-height: var(--label-leading);
   letter-spacing: var(--tracking-body);
@@ -319,7 +337,6 @@ button:focus-visible {
 }
 .project__copy p {
   margin: 0;
-  color: var(--color-text);
   font-size: var(--body-size);
   line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
@@ -366,8 +383,6 @@ button:focus-visible {
   display: grid;
   grid-template-columns: var(--grid-content-start) minmax(0, 1fr);
   gap: var(--space-10) 0;
-  padding-block: var(--section-about-space);
-  color: var(--color-text);
 }
 
 .about__number,
@@ -401,7 +416,6 @@ button:focus-visible {
 
 .about__copy h3 {
   margin: 0 0 var(--space-4);
-  color: var(--color-text);
   font-size: var(--heading-size);
   font-weight: var(--weight-medium);
   line-height: var(--leading-tight);
@@ -421,11 +435,10 @@ button:focus-visible {
 }
 
 .about__skills {
-  font-weight: var(--skills-weight);
   display: flex;
   gap: var(--skills-column-gap);
   font-size: var(--skills-size);
-  line-height: var(--skills-leading);
+  line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
 }
 
@@ -550,10 +563,6 @@ button:focus-visible {
     animation-play-state: paused;
   }
 
-  .intro {
-    padding-bottom: var(--space-20);
-  }
-
   .site-header {
     position: relative;
     z-index: 2;
@@ -632,8 +641,7 @@ button:focus-visible {
     visibility: hidden;
   }
 
-  .mobile-menu[open] {
-    display: block;
+  .mobile-menu {
     position: fixed;
     z-index: 1;
     inset: 0;
@@ -647,6 +655,10 @@ button:focus-visible {
     background: var(--color-background);
     color: var(--color-text);
     overflow-y: auto;
+  }
+
+  .mobile-menu[open] {
+    display: block;
   }
 
   .mobile-menu__links {
@@ -723,8 +735,6 @@ button:focus-visible {
   display: grid;
   grid-template-columns: var(--grid-content-start) minmax(0, 1fr);
   row-gap: var(--space-10);
-  padding-block: var(--section-experience-start) var(--section-experience-end);
-  color: var(--color-text);
   font-size: var(--body-size);
   line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
@@ -746,7 +756,6 @@ button:focus-visible {
 
 .experience__intro h3 {
   margin: 0 0 var(--space-4);
-  color: var(--color-text);
   font-size: var(--heading-size);
   font-weight: var(--weight-medium);
   line-height: var(--experience-heading-leading);
@@ -785,9 +794,7 @@ button:focus-visible {
   grid-column: 1;
   max-width: 276px;
   margin: 0;
-  font-size: var(--job-title-size);
   font-weight: var(--body-weight);
-  line-height: var(--job-title-leading);
   letter-spacing: var(--tracking-body);
 }
 
@@ -863,7 +870,7 @@ button:focus-visible {
   grid-template-columns: minmax(0, 1fr) auto auto minmax(0, 1fr) auto;
   align-items: center;
   gap: var(--space-8);
-  padding-block: var(--footer-padding);
+  padding-block: var(--space-4);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
   line-height: var(--leading-normal);
@@ -906,6 +913,10 @@ button:focus-visible {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
   [data-reveal="fade"] {
     opacity: 0;
     transition: opacity var(--motion-fade-duration) var(--motion-fade-easing) var(--reveal-delay, 0ms);
@@ -938,6 +949,32 @@ button:focus-visible {
 
   [data-reveal="curtain"].is-visible::after {
     transform: scaleY(0);
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .mobile-menu {
+    opacity: 0;
+    transition: opacity var(--motion-menu-duration) var(--motion-fade-easing),
+      display var(--motion-menu-duration) allow-discrete;
+  }
+
+  .mobile-menu[open] {
+    opacity: 1;
+  }
+
+  .mobile-menu__links {
+    transform: translateY(var(--space-4));
+    transition: transform var(--motion-menu-duration) var(--motion-fade-easing);
+  }
+
+  .mobile-menu[open] .mobile-menu__links {
+    transform: translateY(0);
+  }
+
+  @starting-style {
+    .mobile-menu[open] { opacity: 0; }
+    .mobile-menu[open] .mobile-menu__links { transform: translateY(var(--space-4)); }
   }
 }
 
