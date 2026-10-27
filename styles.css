@@ -470,7 +470,8 @@ button:focus-visible {
   .clients__logos {
     display: flex;
     gap: var(--space-8);
-    width: calc(100% + var(--page-gutter));
+    width: calc(100% + var(--page-gutter) * 2);
+    margin-inline: calc(-1 * var(--page-gutter));
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -492,7 +493,7 @@ button:focus-visible {
     animation: clients-loop var(--clients-loop-duration) linear infinite;
   }
 
-  .clients__logos:focus-within li,
+  .clients__logos:focus-visible li,
   .clients__logos:active li {
     animation-play-state: paused;
   }
@@ -920,7 +921,7 @@ button:focus-visible {
   }
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .clients__logos:hover li {
     animation-play-state: paused;
   }
