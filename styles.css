@@ -843,6 +843,81 @@ button:focus-visible {
 @media print {
   [data-reveal="fade"] { opacity: 1; }
   [data-reveal="curtain"]::after { display: none; }
+  .project-cursor { display: none; }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .project__copy,
+  .project__visual {
+    transition: opacity var(--motion-dim-duration);
+  }
+
+  .projects:has(.project:hover) .project:not(:hover) > * {
+    opacity: var(--project-inactive-opacity);
+  }
+
+  .project__image img {
+    transition: transform var(--motion-project-duration) var(--motion-fade-easing);
+  }
+
+  .project:hover .project__image img {
+    transform: scale(var(--project-hover-scale));
+  }
+
+  .project__copy h3 span {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background: linear-gradient(currentColor, currentColor) left 90% / 0 var(--line-width) no-repeat;
+    transition: background-size var(--motion-title-duration) var(--motion-fade-easing);
+  }
+
+  .project:hover .project__copy h3 span {
+    background-size: 100% var(--line-width);
+  }
+
+  .project__visual figcaption span {
+    opacity: 0;
+    transform: translateY(var(--motion-tag-offset));
+    transition: opacity var(--motion-tag-duration) var(--motion-fade-easing),
+      transform var(--motion-tag-duration) var(--motion-fade-easing);
+  }
+
+  .project__visual figcaption span:nth-child(2) { transition-delay: var(--motion-tag-stagger); }
+  .project__visual figcaption span:nth-child(3) { transition-delay: calc(var(--motion-tag-stagger) * 2); }
+  .project__visual figcaption span:nth-child(4) { transition-delay: calc(var(--motion-tag-stagger) * 3); }
+
+  .project:hover figcaption span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .has-project-cursor .project__image {
+    cursor: none;
+  }
+
+  .project-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: var(--project-cursor-size);
+    height: var(--project-cursor-size);
+    border-radius: 50%;
+    background: var(--color-project-cursor);
+    color: var(--color-text);
+    font: var(--weight-medium) var(--text-sm) / var(--leading-normal) var(--font-family);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform var(--motion-dim-duration) var(--motion-fade-easing), opacity var(--motion-tag-duration);
+  }
+
+  .project-cursor.is-visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 @media (hover: hover) {

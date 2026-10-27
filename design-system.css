@@ -42,6 +42,7 @@
   --text-lg: 20px;
   --text-xl: 24px;
   --text-card: 28px;
+  --text-card-wide: 35px;
   --text-heading: 48px;
   --text-display: 72px;
   --text-heading-mobile: 32px;
@@ -60,7 +61,7 @@
   --label-leading: 22px;
   --label-weight: var(--weight-regular);
   --heading-size: var(--text-heading);
-  --card-title-size: var(--text-card);
+  --card-title-size: var(--text-card-wide);
   --card-title-leading: 1;
   --job-title-size: var(--text-lg);
   --job-title-leading: 24px;
@@ -139,10 +140,21 @@
   --motion-fade-easing: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-curtain-duration: 0.9s;
   --motion-curtain-easing: cubic-bezier(0.76, 0, 0.24, 1);
+  --motion-project-duration: 0.7s;
+  --motion-title-duration: 0.5s;
+  --motion-dim-duration: 0.4s;
+  --motion-tag-duration: 0.35s;
+  --motion-tag-stagger: 50ms;
+  --motion-tag-offset: var(--space-5);
+  --project-hover-scale: 1.04;
+  --project-inactive-opacity: 0.4;
+  --project-cursor-size: 120px;
+  --color-project-cursor: #fe6e0f;
 }
 
 @media (max-width: 1440px) {
   :root {
+    --card-title-size: var(--text-card);
     --container-width: calc(54.166667vw + 420px);
     --grid-content-start: 36.666667%;
     --grid-copy-width: 31.666667%;
