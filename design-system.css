@@ -26,10 +26,10 @@
   --color-background: #fff;
   --color-text: #1d1d1d;
   --color-muted: #737373;
-  --color-heading-muted: #b8c0c5;
+  --color-heading-muted: #7f8487;
   --color-surface: #e9e9e9;
   --color-border: color-mix(in srgb, var(--color-text) 10%, transparent);
-  --color-divider: color-mix(in srgb, var(--color-heading-muted) 50%, transparent);
+  --color-divider: color-mix(in srgb, #b8c0c5 50%, transparent);
 
   /* Шрифт и типографическая шкала */
   --font-family: Geist, Arial, sans-serif;
