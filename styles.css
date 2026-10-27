@@ -208,7 +208,7 @@ button:focus-visible {
   margin: var(--hero-facts-gap) 0 0;
   font-size: var(--facts-size);
   font-weight: var(--facts-weight);
-  line-height: var(--leading-normal);
+  line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
 }
 
@@ -776,6 +776,11 @@ button:focus-visible {
   gap: var(--space-1) var(--space-5);
 }
 
+.experience__jobs li + li {
+  border-top: var(--line-width) solid var(--color-divider);
+  padding-top: var(--experience-row-gap);
+}
+
 .experience__jobs h4 {
   grid-column: 1;
   max-width: 276px;
@@ -845,6 +850,54 @@ button:focus-visible {
 
   .experience__jobs li:not(:first-child) h4 {
     white-space: normal;
+  }
+}
+
+.site-footer {
+  background: var(--footer-background);
+  color: var(--color-background);
+}
+
+.site-footer__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-8);
+  padding-block: var(--footer-padding);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-body);
+}
+
+.site-footer .identity {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .site-footer__content {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: var(--space-2) var(--space-6);
+    padding-block: var(--space-6);
+  }
+
+  .site-footer__phone {
+    grid-area: 2 / 1 / auto / -1;
+    margin-top: var(--space-4);
+  }
+
+  .site-footer__email {
+    grid-area: 3 / 1 / auto / -1;
+  }
+}
+
+@media (max-width: 374px) {
+  .site-footer__content {
+    column-gap: var(--space-3);
+  }
+
+  .site-footer .identity {
+    font-size: var(--text-caption);
   }
 }
 

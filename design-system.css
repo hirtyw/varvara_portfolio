@@ -36,6 +36,7 @@
   --weight-regular: 400;
   --weight-medium: 500;
   --text-xs: 10px;
+  --text-caption: 12px;
   --text-sm: 14px;
   --text-base: 16px;
   --text-md: 18px;
@@ -57,7 +58,7 @@
   /* Общие типографические роли */
   --body-weight: var(--weight-regular);
   --body-size: var(--text-md);
-  --body-leading: 22px;
+  --body-leading: 1.4;
   --label-size: var(--text-md);
   --label-leading: 22px;
   --label-weight: var(--weight-medium);
@@ -69,7 +70,9 @@
   --facts-size: var(--text-md);
   --facts-weight: var(--body-weight);
   --skills-size: var(--text-lg);
-  --skills-leading: 24px;
+  --skills-leading: var(--body-leading);
+  --footer-background: #000;
+  --footer-padding: var(--space-4);
   --skills-weight: var(--body-weight);
   --about-heading-tracking: var(--tracking-heading);
   --experience-heading-tracking: var(--tracking-heading);
@@ -183,7 +186,6 @@
     --grid-copy-width: 31.121495%;
     --project-media-ratio: 675 / 380;
     --body-size: var(--text-sm);
-    --body-leading: 17px;
     --label-size: var(--text-sm);
     --label-leading: 17px;
     --clients-heading-gap: 45px;
@@ -227,7 +229,6 @@
     --card-title-leading: 25px;
     --facts-size: var(--text-sm);
     --skills-size: var(--text-base);
-    --skills-leading: 19px;
     --skills-column-gap: var(--space-5);
     --skills-row-gap: 9px;
     --about-heading-tracking: var(--tracking-heading);
