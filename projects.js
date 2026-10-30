@@ -1,5 +1,6 @@
 const projects = document.querySelector('#projects');
 const projectHover = window.matchMedia('(min-width: 768px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+const projectTouch = window.matchMedia('(max-width: 767px) and (prefers-reduced-motion: no-preference)');
 let projectCursor;
 
 function hideProjectCursor() {
@@ -7,7 +8,8 @@ function hideProjectCursor() {
 }
 
 function syncProjectCursor() {
-  if (projectHover.matches) {
+  if (projectHover.matches || projectTouch.matches) {
+    projectCursor?.remove();
     projectCursor = document.createElement('div');
     projectCursor.className = 'project-cursor';
     projectCursor.textContent = 'Скоро';
@@ -21,17 +23,32 @@ function syncProjectCursor() {
 }
 
 projects.addEventListener('pointermove', event => {
-  if (!projectCursor) return;
+  if (!projectCursor || !projectHover.matches || event.pointerType !== 'mouse') return;
   const image = event.target.closest('.project__image');
-  projectCursor.classList.toggle('is-visible', Boolean(image));
-  if (image) {
-    projectCursor.textContent = image.matches('a[href]') ? 'Смотреть' : 'Скоро';
-    projectCursor.style.translate = `${event.clientX}px ${event.clientY}px`;
-  }
+  if (image) showProjectCursor(image, event);
+  else hideProjectCursor();
 });
 
+function showProjectCursor(image, event) {
+  projectCursor.textContent = image.matches('a[href]') ? 'Смотреть' : 'Скоро';
+  projectCursor.style.translate = `${event.clientX}px ${event.clientY}px`;
+  projectCursor.classList.toggle('is-touch', event.pointerType !== 'mouse');
+  projectCursor.classList.add('is-visible');
+}
+
+projects.addEventListener('pointerdown', event => {
+  if (!projectCursor || !projectTouch.matches || event.pointerType === 'mouse') return;
+  const image = event.target.closest('.project__image');
+  if (image) showProjectCursor(image, event);
+});
+
+window.addEventListener('pointerup', event => {
+  if (event.pointerType !== 'mouse') hideProjectCursor();
+});
+window.addEventListener('pointercancel', hideProjectCursor);
 projects.addEventListener('pointerleave', hideProjectCursor);
 window.addEventListener('scroll', hideProjectCursor, { passive: true });
 window.addEventListener('blur', hideProjectCursor);
 projectHover.addEventListener('change', syncProjectCursor);
+projectTouch.addEventListener('change', syncProjectCursor);
 syncProjectCursor();

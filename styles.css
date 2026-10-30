@@ -1228,7 +1228,9 @@ a.project__image { display: block; }
   .has-project-cursor .project__image {
     cursor: none;
   }
+}
 
+@media screen and (prefers-reduced-motion: no-preference) {
   .project-cursor {
     position: fixed;
     top: 0;
@@ -1251,6 +1253,10 @@ a.project__image { display: block; }
   .project-cursor.is-visible {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+
+  .project-cursor.is-touch.is-visible {
+    transition: none;
   }
 }
 
