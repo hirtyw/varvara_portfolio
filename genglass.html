@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Редизайн и развитие e‑commerce платформы Genglass — проект Варвары Кокиной.">
+    <title>Genglass — Варвара Кокина</title>
+    <link rel="preload" href="assets/fonts/geist-medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/geist-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
+  </head>
+  <body class="intro intro--project">
+    <header class="site-header container">
+      <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+        <span class="identity__portrait">
+          <img src="assets/images/avatar.png" alt="" width="32" height="32">
+        </span>
+        <span>Кокина Варвара</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf" aria-label="Скачать CV Варвары Кокиной в PDF">
+          CV
+        </a>
+        <a class="nav-link" href="./#projects">
+          Все работы
+        </a>
+      </nav>
+      <a class="nav-link" href="https://t.me/hirtyww">
+        Связаться
+      </a>
+      <button class="nav-link menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Меню</span>
+      </button>
+    </header>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню">
+      <nav class="mobile-menu__links" aria-label="Мобильная навигация">
+        <a href="./#projects">+ Все работы</a>
+        <a href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">+ CV</a>
+        <a href="https://t.me/hirtyww">+ Связаться</a>
+      </nav>
+    </dialog>
+    <main>
+      <section class="hero hero--project container" aria-labelledby="project-title">
+        <h1 class="hero__title" id="project-title">Редизайн и развитие<br>e‑commerce платформы для мебельного бренда</h1>
+        <dl class="hero__facts">
+          <div class="hero__fact">
+            <dt>Бренд</dt>
+            <dd>Genglass</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Тематика</dt>
+            <dd>Дизайнерская мебель,<br>предметы интерьера</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Год</dt>
+            <dd>2025–2026</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Сайт</dt>
+            <dd><a href="https://genglass.ru/">genglass.ru</a></dd>
+          </div>
+        </dl>
+        <div class="hero__visual">
+          <img src="assets/images/projects/genglass-cover.png" alt="Десктопная и мобильная версии интернет-магазина Genglass" fetchpriority="high" width="3840" height="2160">
+        </div>
+      </section>
+      <section class="about about--project container" aria-labelledby="company-title">
+        <h2 id="company-title">О компании</h2>
+        <div class="about__copy">
+          <p>GENGLASS — российский производитель дизайнерской мебели, зеркал и интерьерных решений из стекла и металла с собственным производством полного цикла. Компания работает одновременно с B2C и B2B сегментами: частными покупателями, дизайнерами интерьеров, архитекторами и коммерческими заказчиками. До начала работы сайт постепенно перестал соответствовать масштабу бизнеса. Отсутствие возможности масштабирования замедляла процесс развития розничного направления.</p>
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/genglass-mobile-catalog.png" alt="Каталог, фильтры, карточка товара и личный кабинет Genglass на мобильном" loading="lazy" width="3840" height="2160">
+      </figure>
+      <section class="about about--project container" aria-labelledby="problem-title">
+        <h2 id="problem-title">Проблема</h2>
+        <div class="about__copy">
+          <p>Работая в связке с: владельцем бизнеса, маркетологами, SEO-специалистом, разработчиками, контент-менеджерами, производством, мы обнаружили несколько проблем:</p>
+          <ul>
+            <li>Большое количество сценариев было разрознено</li>
+            <li>Пользователям было сложно понять возможности производства</li>
+            <li>Каталог плохо раскрывал вариативность изделий</li>
+            <li>Отсутствовала единая дизайн-система</li>
+            <li>Интерфейс развивался несистемно</li>
+            <li>Маркетингу было сложно запускать новые направления</li>
+            <li>Часть информации была понятна только сотрудникам компании</li>
+          </ul>
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case project__visual--pair container">
+        <img src="assets/images/projects/genglass-typography.png" alt="Типографическая шкала дизайн-системы Genglass" loading="lazy" width="590" height="449">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/genglass-palette-mobile.png" width="393" height="207">
+          <img src="assets/images/projects/genglass-palette.png" alt="Основные и акцентные цвета дизайн-системы Genglass" loading="lazy" width="590" height="449">
+        </picture>
+      </figure>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/genglass-account-desktop.png" alt="Личный кабинет: адреса доставки, десктопная версия" loading="lazy" width="1200" height="878">
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--devices container">
+        <img src="assets/images/projects/genglass-account-mobile.png" alt="Адреса доставки на телефоне" loading="lazy" width="209" height="490">
+        <img src="assets/images/projects/genglass-account-tablet.png" alt="Адреса доставки на планшете" loading="lazy" width="407" height="286">
+        <img src="assets/images/projects/genglass-account-laptop.png" alt="Адреса доставки на ноутбуке" loading="lazy" width="543" height="454">
+      </figure>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/genglass-showroom.png" alt="Страница проекта: комплексное оснащение шоу-рума, наполнение, дизайнеры и отзывы" loading="lazy" width="1200" height="1904">
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--quiz container">
+        <img src="assets/images/projects/genglass-quiz-desktop.png" alt="Квиз подбора интерьерной перегородки на десктопе" loading="lazy" width="921" height="515">
+        <img src="assets/images/projects/genglass-quiz-mobile.png" alt="Мобильная версия квиза подбора перегородки" loading="lazy" width="259" height="516">
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--brand container">
+        <img src="assets/images/projects/genglass-brand-pages.png" alt="Десктопная и мобильная версии страницы о компании Genglass" loading="lazy" width="1200" height="849">
+      </figure>
+      <section class="about about--project container" aria-labelledby="results-title">
+        <h2 id="results-title">Что получилось</h2>
+        <div class="about__copy">
+          <p>За время проекта была разработана полноценная цифровая экосистема бренда. В рамках работы было создано:</p>
+          <ul>
+            <li>Десятки пользовательских сценариев</li>
+            <li>Сотни экранов</li>
+            <li>Большая дизайн-система</li>
+            <li>Адаптивные версии</li>
+            <li>Корпоративные и B2B страницы</li>
+            <li>Интернет-магазин</li>
+            <li>Личный кабинет</li>
+            <li>Бонусная система</li>
+            <li>Контентные разделы</li>
+            <li>Шаблоны для дальнейшего развития продукта</li>
+          </ul>
+          <p>Проект продолжает развиваться и масштабироваться вместе с бизнесом.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__content container">
+        <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+          <span class="identity__portrait"><img src="assets/images/avatar.png" alt="" width="32" height="32"></span>
+          <span>Кокина Варвара</span>
+        </a>
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">CV</a>
+        <a class="site-footer__phone" href="tel:+79101269956">89101269956</a>
+        <a class="site-footer__email" href="mailto:hirtyw@gmail.com">hirtyw@gmail.com</a>
+        <a class="nav-link" href="https://t.me/hirtyww">Связаться</a>
+      </div>
+    </footer>
+  </body>
+</html>

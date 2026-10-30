@@ -24,7 +24,10 @@ projects.addEventListener('pointermove', event => {
   if (!projectCursor) return;
   const image = event.target.closest('.project__image');
   projectCursor.classList.toggle('is-visible', Boolean(image));
-  if (image) projectCursor.style.translate = `${event.clientX}px ${event.clientY}px`;
+  if (image) {
+    projectCursor.textContent = image.matches('a[href]') ? 'Смотреть' : 'Скоро';
+    projectCursor.style.translate = `${event.clientX}px ${event.clientY}px`;
+  }
 });
 
 projects.addEventListener('pointerleave', hideProjectCursor);

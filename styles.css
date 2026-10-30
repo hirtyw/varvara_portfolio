@@ -224,6 +224,39 @@ button:focus-visible {
   margin-top: var(--space-4);
 }
 
+.hero--project {
+  width: min(var(--container-width), calc(100% - var(--page-gutter) * 2));
+  margin-top: var(--space-20);
+  translate: none;
+}
+
+.intro--project {
+  padding-bottom: 0;
+}
+
+.hero--project .hero__title {
+  max-width: 1052px;
+}
+
+.hero--project .hero__facts {
+  width: calc(100% - var(--grid-content-start));
+  margin-top: var(--space-8);
+}
+
+.hero--project .hero__visual {
+  height: auto;
+  aspect-ratio: 1199 / 532;
+  margin-top: calc(var(--space-10) + var(--space-5));
+  cursor: auto;
+}
+
+.hero--project .hero__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: -1.2908%;
+}
+
 .hero__facts {
   display: flex;
   justify-content: space-between;
@@ -342,6 +375,7 @@ button:focus-visible {
   letter-spacing: var(--tracking-body);
 }
 .project__visual { position: relative; margin: 0; }
+a.project__image { display: block; }
 .project__image {
   position: relative;
   overflow: hidden;
@@ -440,6 +474,62 @@ button:focus-visible {
   font-size: var(--skills-size);
   line-height: var(--body-leading);
   letter-spacing: var(--tracking-body);
+}
+
+.about--project h2 {
+  font-size: var(--text-card);
+  line-height: var(--card-title-leading);
+  letter-spacing: var(--tracking-heading);
+}
+
+.about--project .about__copy {
+  max-width: 545px;
+}
+
+.about--project ul {
+  display: grid;
+  gap: var(--space-3);
+  margin-block: var(--space-6);
+  padding-left: var(--space-6);
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  letter-spacing: var(--tracking-body);
+}
+
+.about--project ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Static project screens are illustrations within the case study. */
+.project__visual--case {
+  display: grid;
+  gap: var(--space-5);
+  margin-inline: auto;
+}
+
+.project__visual--case + .project__visual--case {
+  margin-top: var(--space-10);
+}
+
+.project__visual--case img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+
+.project__visual--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project__visual--devices {
+  grid-template-columns: 208.212fr 406.887fr 542.517fr;
+  align-items: start;
+}
+
+.project__visual--quiz {
+  grid-template-columns: 920.887fr 258.901fr;
+  align-items: start;
 }
 
 .about__skills ul {
@@ -671,6 +761,100 @@ button:focus-visible {
     font-weight: var(--weight-medium);
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-display);
+  }
+
+  .hero--project {
+    translate: none;
+  }
+
+  .hero--project .hero__title {
+    font-size: var(--text-heading-mobile);
+    letter-spacing: var(--tracking-heading);
+  }
+
+  .hero--project .hero__facts {
+    width: 100%;
+    margin-top: var(--space-10);
+  }
+
+  .hero--project .hero__fact {
+    grid-template-columns: 94px minmax(0, 1fr);
+  }
+
+  .hero--project .hero__fact:nth-child(2) dd {
+    max-width: none;
+  }
+
+  .hero--project .hero__visual {
+    aspect-ratio: 354 / 206.324;
+    margin-top: var(--space-10);
+  }
+
+  .hero--project .hero__visual img {
+    width: 108.474576%;
+    margin-left: -4.237288%;
+  }
+
+  .about--project {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    background: none;
+  }
+
+  .about--project h2 {
+    justify-self: start;
+    font-size: var(--text-card-mobile);
+    line-height: var(--leading-tight);
+  }
+
+  .about--project .about__copy {
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .about--project ul {
+    gap: var(--space-2-5);
+    margin-block: var(--space-5);
+    padding-left: var(--space-5);
+  }
+
+  .project__visual--case:not(.project__visual--devices, .project__visual--quiz) {
+    width: 100%;
+  }
+
+  .project__visual--case + .project__visual--case {
+    margin-top: var(--space-5);
+  }
+
+  .about--project + .project__visual--case {
+    margin-top: 0;
+  }
+
+  .project__visual--pair {
+    grid-template-columns: 1fr;
+  }
+
+  .project__visual--devices {
+    grid-template-columns: 116.201fr 227.078fr;
+    gap: var(--space-3);
+  }
+
+  .project__visual--devices img:last-child {
+    display: none;
+  }
+
+  .project__visual--quiz {
+    gap: var(--space-2);
+  }
+
+  .project__visual--brand {
+    overflow: clip;
+  }
+
+  .project__visual--brand img {
+    width: 109.160305%;
+    max-width: none;
+    margin-left: -4.580153%;
   }
 
 }
