@@ -25,7 +25,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
   reveal('.hero__facts, .about__copy, .experience__intro', 'fade', 150);
   reveal('.about__skills', 'fade', 650);
   reveal('.experience__jobs', 'fade', 700);
-  reveal('.hero__visual, .about__portrait, .project__image', 'curtain');
+  reveal('.hero__visual, .about__portrait, .project__image, .project__visual--case', 'curtain');
   document.querySelectorAll('.project').forEach((project, index) => {
     project.dataset.reveal = 'fade';
     project.style.setProperty('--reveal-delay', `${Math.min(index * 80, 400)}ms`);
