@@ -6,7 +6,7 @@ const typograf = new Typograf({
   locale: ['ru', 'en-US'],
   enableRule: ['common/nbsp/afterNumber'],
 });
-for (const name of ['index.html', 'genglass.html']) {
+for (const name of ['index.html', 'genglass.html', 'estes.html']) {
   const file = new URL(name, import.meta.url);
   const source = await readFile(file, 'utf8');
   // Keep the last two words of paragraphs and headings together across browsers.

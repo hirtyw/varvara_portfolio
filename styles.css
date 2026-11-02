@@ -257,6 +257,14 @@ button:focus-visible {
   margin-top: -1.2908%;
 }
 
+.hero--estes .hero__facts {
+  max-width: 545px;
+}
+
+.hero--estes .hero__visual img {
+  margin: 0;
+}
+
 .hero__facts {
   display: flex;
   justify-content: space-between;
@@ -529,6 +537,17 @@ a.project__image { display: block; }
 
 .project__visual--quiz {
   grid-template-columns: 920.887fr 258.901fr;
+  align-items: start;
+}
+
+.project__visual--catalog {
+  grid-template-columns: 834.773fr 345fr;
+  align-items: start;
+}
+
+.project__visual--triptych {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-10);
   align-items: start;
 }
 
@@ -845,6 +864,23 @@ a.project__image { display: block; }
 
   .project__visual--quiz {
     gap: var(--space-2);
+  }
+
+  .project__visual--catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project__visual--triptych {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .hero--estes .hero__visual {
+    aspect-ratio: 1198 / 532;
+  }
+
+  .hero--estes .hero__visual img {
+    width: 100%;
   }
 
   .project__visual--brand {

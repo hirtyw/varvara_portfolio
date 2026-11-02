@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Создание многостраничного сайта агентства недвижимости Estes — проект Варвары Кокиной.">
+    <title>Estes — Варвара Кокина</title>
+    <link rel="preload" href="assets/fonts/geist-medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/geist-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
+    <script src="reveal.js" type="module"></script>
+  </head>
+  <body class="intro intro--project">
+    <header class="site-header container">
+      <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+        <span class="identity__portrait">
+          <img src="assets/images/avatar.png" alt="" width="32" height="32">
+        </span>
+        <span>Кокина Варвара</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf" aria-label="Скачать CV Варвары Кокиной в PDF">
+          CV
+        </a>
+        <a class="nav-link" href="./#projects">
+          Все работы
+        </a>
+      </nav>
+      <a class="nav-link" href="https://t.me/hirtyww">
+        Связаться
+      </a>
+      <button class="nav-link menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Меню</span>
+      </button>
+    </header>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню">
+      <nav class="mobile-menu__links" aria-label="Мобильная навигация">
+        <a href="./#projects">+ Все работы</a>
+        <a href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">+ CV</a>
+        <a href="https://t.me/hirtyww">+ Связаться</a>
+      </nav>
+    </dialog>
+    <main>
+      <section class="hero hero--project hero--estes container" aria-labelledby="project-title">
+        <h1 class="hero__title" id="project-title">Создание многостраничного сайта для агентства недвижимости</h1>
+        <dl class="hero__facts">
+          <div class="hero__fact">
+            <dt>Бренд</dt>
+            <dd>Estes</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Тематика</dt>
+            <dd>Недвижимость</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Год</dt>
+            <dd>2022</dd>
+          </div>
+        </dl>
+        <div class="hero__visual">
+          <img src="assets/images/projects/estes-cover.png" alt="Десктопная и мобильная версии сайта агентства недвижимости Estes" fetchpriority="high" width="1198" height="532">
+        </div>
+      </section>
+      <section class="about about--project container" aria-labelledby="company-title">
+        <h2 id="company-title">О компании</h2>
+        <div class="about__copy">
+          <p>ESTES — сервис недвижимости, объединяющий подбор объектов, аналитику рынка и сопровождение сделок. Компания работает с жилой недвижимостью Москвы, помогает оценивать инвестиционный потенциал объектов и находить оптимальные предложения.</p>
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/estes-overview.png" alt="Мобильные экраны Estes: районы Москвы, история продаж, подбор недвижимости и услуги консьерж-сервиса" loading="lazy" width="1200" height="675">
+      </figure>
+      <section class="about about--project container" aria-labelledby="problem-title">
+        <h2 id="problem-title">Проблема</h2>
+        <div class="about__copy">
+          <p>Нужно было с нуля создать сайт для сервиса недвижимости, который объединяет большой объём объектов, аналитику рынка и дополнительные услуги. Основные сложности</p>
+          <ul>
+            <li>Сформировать понятную структуру продукта без существующей дизайн-системы</li>
+            <li>Организовать большой объём информации об объектах недвижимости</li>
+            <li>Сделать сложные данные и аналитику понятными для пользователя</li>
+            <li>Продумать сценарии поиска, выбора и сравнения квартир</li>
+            <li>Объединить в одном интерфейсе каталог недвижимости, исследования и дополнительные услуги</li>
+            <li>Сформировать визуальный язык, который вызывает доверие и соответствует премиальному сегменту</li>
+            <li>Создать масштабируемую систему, которую можно развивать по мере появления новых разделов и функций</li>
+          </ul>
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/estes-design-map.png" alt="Общая схема экранов и пользовательских сценариев Estes" loading="lazy" width="1200" height="732">
+      </figure>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/estes-catalog.png" alt="Каталог квартир на карте, поиск с фильтрами и преимущества сервиса Estes" loading="lazy" width="1200" height="1249">
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--catalog container">
+        <img src="assets/images/projects/estes-catalog-tablet.png" alt="Планшетная версия поиска квартир на карте" loading="lazy" width="835" height="990">
+        <img src="assets/images/projects/estes-catalog-mobile.png" alt="Мобильная версия поиска квартир на карте" loading="lazy" width="345" height="931">
+      </figure>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/estes-services.png" alt="Сервисы Estes: ипотека, страхование, оценка, исследования и сопровождение сделок" loading="lazy" width="1198" height="695">
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--triptych container">
+        <img src="assets/images/projects/estes-history.png" alt="Мобильная страница истории продаж квартир" loading="lazy" width="373" height="869">
+        <img src="assets/images/projects/estes-sales.png" alt="Аналитика истории продаж и параметров квартир" loading="lazy" width="373" height="869">
+        <img src="assets/images/projects/estes-menu.png" alt="Мобильное меню сайта Estes" loading="lazy" width="373" height="705">
+      </figure>
+      <section class="about about--project container" aria-labelledby="results-title">
+        <h2 id="results-title">Что получилось</h2>
+        <div class="about__copy">
+          <p>В результате с нуля был разработан полноценный digital-продукт для поиска, анализа и выбора недвижимости.</p>
+          <ul>
+            <li>Каталог объектов с продуманной системой поиска и фильтрации</li>
+            <li>Подробные страницы квартир и жилых комплексов</li>
+            <li>Сценарии выбора и сравнения объектов</li>
+            <li>Инструменты для оценки инвестиционной привлекательности</li>
+            <li>Раздел с исследованиями и аналитикой рынка недвижимости</li>
+            <li>Интеграция дополнительных сервисов: ипотека, юридическая проверка и сопровождение сделки</li>
+            <li>Адаптивные версии для разных устройств</li>
+            <li>Единая дизайн-система и библиотека компонентов</li>
+            <li>Шаблоны для дальнейшего масштабирования продукта</li>
+          </ul>
+          <p>Получилась единая экосистема, которая помогает пользователю пройти путь от изучения рынка и поиска квартиры до принятия решения и обращения за сопровождением сделки.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__content container">
+        <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+          <span class="identity__portrait"><img src="assets/images/avatar.png" alt="" width="32" height="32"></span>
+          <span>Кокина Варвара</span>
+        </a>
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">CV</a>
+        <a class="site-footer__phone" href="tel:+79101269956">89101269956</a>
+        <a class="site-footer__email" href="mailto:hirtyw@gmail.com">hirtyw@gmail.com</a>
+        <a class="nav-link" href="https://t.me/hirtyww">Связаться</a>
+      </div>
+    </footer>
+  </body>
+</html>
