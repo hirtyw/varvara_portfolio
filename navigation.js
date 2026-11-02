@@ -9,10 +9,13 @@ function syncMenu() {
   document.documentElement.classList.toggle('menu-open', menu.open);
 }
 
-toggle.addEventListener('click', () => {
+toggle.addEventListener('click', (event) => {
   // A non-modal dialog keeps the shared header and its close button accessible.
   if (menu.open) menu.close();
-  else menu.show();
+  else {
+    menu.show();
+    if (event.detail > 0) toggle.focus({ preventScroll: true });
+  }
   syncMenu();
 });
 
