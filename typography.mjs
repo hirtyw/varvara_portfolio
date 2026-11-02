@@ -16,8 +16,6 @@ for (const name of ['index.html', 'genglass.html', 'estes.html']) {
       /([\p{L}\p{N}][\p{L}\p{N}+/–.-]*)[ \u00a0]+([\p{L}\p{N}][\p{L}\p{N}+/–.-]*[.!?…]?)((?:<\/span>)?)$/u,
       '$1\u00a0$2$3',
     ) + close,
-  ).replace(/(<h3\b[^>]*>)([\s\S]*?)(<\/h3>)/g,
-    (_, open, text, close) => open + text.replace(/\u00a0/g, ' ') + close,
   );
   if (formatted !== source) await writeFile(file, formatted);
 }
