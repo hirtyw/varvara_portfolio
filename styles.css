@@ -692,6 +692,12 @@ a.project__image { display: block; }
     min-height: var(--control-size);
   }
 
+  .menu-toggle:focus-visible,
+  .mobile-menu a:focus-visible,
+  .menu-open .identity:focus-visible {
+    outline: none;
+  }
+
   .hero {
     translate: -1px 0;
   }
