@@ -30,7 +30,8 @@ projects.addEventListener('pointermove', event => {
 });
 
 function showProjectCursor(image, event) {
-  projectCursor.textContent = image.matches('a[href]') ? 'Смотреть' : 'Скоро';
+  projectCursor.textContent = image.closest('[data-cursor-label]')?.dataset.cursorLabel
+    || (image.matches('a[href]') ? 'Смотреть' : 'Скоро');
   projectCursor.style.translate = `${event.clientX}px ${event.clientY}px`;
   projectCursor.classList.toggle('is-touch', event.pointerType !== 'mouse');
   projectCursor.classList.add('is-visible');

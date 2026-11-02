@@ -1255,8 +1255,13 @@ a.project__image { display: block; }
     transform: translate(-50%, -50%) scale(1);
   }
 
-  .project-cursor.is-touch.is-visible {
-    transition: none;
+  .project-cursor.is-touch {
+    transition: transform var(--motion-dim-duration) var(--motion-fade-easing),
+      opacity var(--motion-dim-duration) var(--motion-fade-easing);
+  }
+
+  .project-cursor.is-touch:not(.is-visible) {
+    transform: translate(-50%, -50%) scale(0.85);
   }
 }
 
