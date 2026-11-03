@@ -257,11 +257,13 @@ button:focus-visible {
   margin-top: -1.2908%;
 }
 
-.hero--estes .hero__facts {
+.hero--estes .hero__facts,
+.hero--agency .hero__facts {
   max-width: 545px;
 }
 
-.hero--estes .hero__visual img {
+.hero--estes .hero__visual img,
+.hero--agency .hero__visual img {
   margin: 0;
 }
 
@@ -547,6 +549,48 @@ a.project__image { display: block; }
 .project__visual--mobile-screens {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: start;
+}
+
+.project__visual--agency-services {
+  grid-template-columns: 821.219fr 358fr;
+}
+
+.project__visual--agency-workflow {
+  grid-template-columns: 814.071fr 364.385fr;
+}
+
+.project__visual--agency-privacy {
+  grid-template-columns: 909.005fr 255.924fr;
+  gap: var(--space-8);
+}
+
+.project__visual--agency-privacy img:first-child {
+  box-shadow: 0 0 28.184px rgb(174 178 183 / 20%);
+}
+
+.project__visual--agency-privacy img:last-child {
+  box-shadow: 0 0 15.466px rgb(174 178 183 / 20%);
+}
+
+.project__visual--agency-services,
+.project__visual--agency-workflow,
+.project__visual--agency-privacy {
+  align-items: start;
+}
+
+.project__visual--case figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project__visual .case-caption {
+  position: static;
+  display: block;
+  margin-top: var(--space-4);
+  font-size: var(--body-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-leading);
+  letter-spacing: var(--tracking-body);
 }
 
 .about__skills ul {
@@ -853,7 +897,10 @@ a.project__image { display: block; }
     margin-top: 0;
   }
 
-  .project__visual--pair {
+  .project__visual--pair,
+  .project__visual--agency-services,
+  .project__visual--agency-workflow,
+  .project__visual--agency-privacy {
     grid-template-columns: 1fr;
   }
 
@@ -879,12 +926,15 @@ a.project__image { display: block; }
     gap: var(--space-5);
   }
 
-  .hero--estes .hero__visual {
+  .hero--estes .hero__visual,
+  .hero--agency .hero__visual {
     aspect-ratio: 1198 / 532;
   }
 
-  .hero--estes .hero__visual img {
+  .hero--estes .hero__visual img,
+  .hero--agency .hero__visual img {
     width: 100%;
+    margin-left: 0;
   }
 
   .project__visual--brand {

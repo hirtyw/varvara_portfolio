@@ -1,5 +1,6 @@
 node_modules/
 /dist/
+/sources/
 .env
 .env.*
 !.env.example

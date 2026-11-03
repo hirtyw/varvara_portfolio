@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Брендинг и комплексная разработка сайта FourAgency — проект Варвары Кокиной.">
+    <title>FourAgency — Варвара Кокина</title>
+    <link rel="preload" href="assets/fonts/geist-medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/geist-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
+    <script src="reveal.js" type="module"></script>
+  </head>
+  <body class="intro intro--project">
+    <header class="site-header container">
+      <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+        <span class="identity__portrait">
+          <img src="assets/images/avatar.png" alt="" width="8" height="459026">
+        </span>
+        <span>Кокина Варвара</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf" aria-label="Скачать CV Варвары Кокиной в PDF">
+          CV
+        </a>
+        <a class="nav-link" href="./#projects">
+          Все работы
+        </a>
+      </nav>
+      <a class="nav-link" href="https://t.me/hirtyww">
+        Связаться
+      </a>
+      <button class="nav-link menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Меню</span>
+      </button>
+    </header>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню">
+      <nav class="mobile-menu__links" aria-label="Мобильная навигация">
+        <a href="./#projects">+ Все работы</a>
+        <a href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">+ CV</a>
+        <a href="https://t.me/hirtyww">+ Связаться</a>
+      </nav>
+    </dialog>
+    <main>
+      <section class="hero hero--project hero--agency container" aria-labelledby="project-title">
+        <h1 class="hero__title" id="project-title">Брендинг и комплексная разработка сайта для маркетингового агентства</h1>
+        <dl class="hero__facts">
+          <div class="hero__fact"><dt>Бренд</dt><dd>FourAgency</dd></div>
+          <div class="hero__fact"><dt>Тематика</dt><dd>Маркетинг</dd></div>
+          <div class="hero__fact"><dt>Год</dt><dd>2025</dd></div>
+        </dl>
+        <div class="hero__visual"><img src="assets/images/projects/agency/agency-cover.png" alt="Десктопная и мобильная версии сайта FourAgency" fetchpriority="high" width="2396" height="1064"></div>
+      </section>
+      <section class="about about--project container" aria-labelledby="company-title">
+        <h2 id="company-title">О компании</h2>
+        <div class="about__copy">
+          <p>FORAGENCY — креативное агентство, объединяющее стратегию, дизайн и digital-решения. Компания помогает брендам находить свой уникальный стиль, выстраивать коммуникацию с аудиторией и создавать проекты, которые выделяются и решают задачи бизнеса.</p>
+
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/agency/agency-overview.png" alt="Мобильные страницы FourAgency: услуги, процесс работы, проекты и контакты" loading="lazy" width="2400" height="1350">
+      </figure>
+      <section class="about about--project container" aria-labelledby="problem-title">
+        <h2 id="problem-title">Проблема</h2>
+        <div class="about__copy">
+          <p>Бренд FOUR AGENCY нуждался в полном переосмыслении визуальной идентичности. Предстояло разработать современный и узнаваемый фирменный стиль, который отражает характер агентства, выделяет его среди конкурентов и формирует целостный образ компании. Основные задачи:</p>
+          <ul>
+            <li>Переосмыслить визуальный образ бренда и определить новое направление его развития</li>
+            <li>Продумать структуру сайта с акцентом на услуги, проекты и экспертизу агентства</li>
+            <li>Создать узнаваемый логотип и единую систему фирменных элементов</li>
+            <li>Подобрать типографику, цветовую палитру и графические приёмы</li>
+            <li>Обеспечить единообразие оформления на цифровых и печатных носителях</li>
+            <li>Предусмотреть возможность развития сайта и добавления новых проектов и разделов</li>
+          </ul>
+
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/agency/agency-design-map.png" alt="Схема экранов и компонентов сайта FourAgency в Figma" loading="lazy" width="4800" height="2877">
+        <figcaption class="case-caption">Экраны проекта в Figma: главная страница, две внутренние страницы с анимациями</figcaption>
+      </figure>
+      <div class="project__visual project__visual--case project__visual--agency-services container">
+        <figure>
+          <img src="assets/images/projects/agency/agency-services-desktop.png" alt="Услуги агентства: десктопная версия" loading="lazy" width="1643" height="2009">
+          <figcaption class="case-caption">Блок «Услуги» с анимацией наложения по скроллу</figcaption>
+        </figure>
+        <img src="assets/images/projects/agency/agency-services-mobile.png" alt="Услуги агентства: мобильная версия" loading="lazy" width="1432" height="3071">
+      </div>
+      <div class="project__visual project__visual--case project__visual--agency-workflow container">
+        <figure>
+          <img src="assets/images/projects/agency/agency-workflow-desktop.png" alt="Как мы работаем: десктопная версия" loading="lazy" width="1629" height="1798">
+          <figcaption class="case-caption">Цепляющий экран «Как мы работаем», показывающий прозрачность работы и вызывающий доверие пользователей</figcaption>
+        </figure>
+        <img src="assets/images/projects/agency/agency-workflow-mobile.png" alt="Как мы работаем: мобильная версия" loading="lazy" width="1458" height="4082">
+      </div>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/agency/agency-inner-pages.png" alt="Уникальные блоки внутренних страниц: этапы работы и вопросы" loading="lazy" width="2399" height="1100">
+        <figcaption class="case-caption">Блоки внутренних страниц были уникальными, но все соблюдали единый стиль компании</figcaption>
+      </figure>
+      <div class="project__visual project__visual--case project__visual--agency-privacy container">
+        <img src="assets/images/projects/agency/agency-privacy-desktop.png" alt="Политика конфиденциальности FourAgency: десктопная версия" loading="lazy" width="1818" height="3179">
+        <img src="assets/images/projects/agency/agency-privacy-mobile.png" alt="Политика конфиденциальности FourAgency: мобильная версия" loading="lazy" width="1024" height="6498">
+      </div>
+      <section class="about about--project container" aria-labelledby="results-title">
+        <h2 id="results-title">Что получилось</h2>
+        <div class="about__copy">
+          <p>В результате был проведён полный ребрендинг FOUR AGENCY и разработан современный сайт с выразительной визуальной системой, отражающей характер и позиционирование агентства.</p>
+          <ul>
+            <li>Обновлённая айдентика с новым логотипом, цветовой палитрой и типографикой</li>
+            <li>Главная страница с презентацией агентства, его услуг и ключевых проектов</li>
+            <li>Две внутренние страницы с детальной проработкой структуры и контента</li>
+            <li>Интерактивные элементы и эффекты, усиливающие визуальное восприятие сайта</li>
+            <li>Проработанные состояния кнопок, ссылок и других элементов интерфейса</li>
+            <li>Единая система компонентов для поддержания визуальной целостности</li>
+            <li>Адаптивные решения для корректного отображения на разных устройствах</li>
+            <li>Гибкая структура для дальнейшего развития сайта и добавления новых разделов</li>
+          </ul>
+          <p>В результате сформирован целостный визуальный образ FOUR AGENCY, объединяющий фирменный стиль и цифровую среду. Новый сайт помогает презентовать экспертизу агентства, раскрывать его проекты и выстраивать коммуникацию с потенциальными клиентами.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__content container">
+        <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+          <span class="identity__portrait"><img src="assets/images/avatar.png" alt="" width="8" height="459026"></span>
+          <span>Кокина Варвара</span>
+        </a>
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">CV</a>
+        <a class="site-footer__phone" href="tel:+79101269956">89101269956</a>
+        <a class="site-footer__email" href="mailto:hirtyw@gmail.com">hirtyw@gmail.com</a>
+        <a class="nav-link" href="https://t.me/hirtyww">Связаться</a>
+      </div>
+    </footer>
+  </body>
+</html>
