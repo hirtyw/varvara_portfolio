@@ -937,6 +937,46 @@ a.project__image { display: block; }
     margin-left: 0;
   }
 
+  .hero--agency {
+    padding-bottom: var(--section-space);
+  }
+
+  .hero--agency .hero__title {
+    overflow-wrap: anywhere;
+  }
+
+  .hero--agency .hero__visual {
+    aspect-ratio: 354 / 206;
+  }
+
+  .hero--agency + .about--project {
+    padding-top: 0;
+  }
+
+  .intro--agency .project__visual--case,
+  .intro--agency .project__visual--case figure {
+    gap: var(--space-3);
+  }
+
+  .intro--agency .project__visual--case figure {
+    display: grid;
+  }
+
+  .intro--agency .project__visual--case + .project__visual--case {
+    margin-top: var(--space-10);
+  }
+
+  .intro--agency .case-caption {
+    margin: 0;
+    padding-inline: var(--page-gutter);
+  }
+
+  .intro--agency .project__visual--agency-services > img,
+  .intro--agency .project__visual--agency-workflow > img,
+  .intro--agency .project__visual--agency-privacy > img {
+    display: none;
+  }
+
   .project__visual--brand {
     overflow: clip;
   }

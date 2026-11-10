@@ -12,7 +12,7 @@
     <script src="navigation.js" defer></script>
     <script src="reveal.js" type="module"></script>
   </head>
-  <body class="intro intro--project">
+  <body class="intro intro--project intro--agency">
     <header class="site-header container">
       <a class="identity" href="./" aria-label="Варвара Кокина — главная">
         <span class="identity__portrait">
@@ -50,7 +50,10 @@
           <div class="hero__fact"><dt>Тематика</dt><dd>Маркетинг</dd></div>
           <div class="hero__fact"><dt>Год</dt><dd>2025</dd></div>
         </dl>
-        <div class="hero__visual"><img src="assets/images/projects/agency/agency-cover.png" alt="Десктопная и мобильная версии сайта FourAgency" fetchpriority="high" width="2396" height="1064"></div>
+        <div class="hero__visual"><picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/agency/agency-cover-compact.png">
+          <img src="assets/images/projects/agency/agency-cover.png" alt="Десктопная и мобильная версии сайта FourAgency" fetchpriority="high" width="2396" height="1064">
+        </picture></div>
       </section>
       <section class="about about--project container" aria-labelledby="company-title">
         <h2 id="company-title">О компании</h2>
@@ -78,29 +81,44 @@
         </div>
       </section>
       <figure class="project__visual project__visual--case container">
-        <img src="assets/images/projects/agency/agency-design-map.png" alt="Схема экранов и компонентов сайта FourAgency в Figma" loading="lazy" width="4800" height="2877">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/agency/agency-design-map-compact.png">
+          <img src="assets/images/projects/agency/agency-design-map.png" alt="Схема экранов и компонентов сайта FourAgency в Figma" loading="lazy" width="4800" height="2877">
+        </picture>
         <figcaption class="case-caption">Экраны проекта в Figma: главная страница, две внутренние страницы с анимациями</figcaption>
       </figure>
       <div class="project__visual project__visual--case project__visual--agency-services container">
         <figure>
+          <picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/agency/agency-services-compact.png">
           <img src="assets/images/projects/agency/agency-services-desktop.png" alt="Услуги агентства: десктопная версия" loading="lazy" width="1643" height="2009">
+        </picture>
           <figcaption class="case-caption">Блок «Услуги» с анимацией наложения по скроллу</figcaption>
         </figure>
         <img src="assets/images/projects/agency/agency-services-mobile.png" alt="Услуги агентства: мобильная версия" loading="lazy" width="1432" height="3071">
       </div>
       <div class="project__visual project__visual--case project__visual--agency-workflow container">
         <figure>
+          <picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/agency/agency-workflow-compact.png">
           <img src="assets/images/projects/agency/agency-workflow-desktop.png" alt="Как мы работаем: десктопная версия" loading="lazy" width="1629" height="1798">
+        </picture>
           <figcaption class="case-caption">Цепляющий экран «Как мы работаем», показывающий прозрачность работы и вызывающий доверие пользователей</figcaption>
         </figure>
         <img src="assets/images/projects/agency/agency-workflow-mobile.png" alt="Как мы работаем: мобильная версия" loading="lazy" width="1458" height="4082">
       </div>
       <figure class="project__visual project__visual--case container">
-        <img src="assets/images/projects/agency/agency-inner-pages.png" alt="Уникальные блоки внутренних страниц: этапы работы и вопросы" loading="lazy" width="2399" height="1100">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/agency/agency-inner-pages-compact.png">
+          <img src="assets/images/projects/agency/agency-inner-pages.png" alt="Уникальные блоки внутренних страниц: этапы работы и вопросы" loading="lazy" width="2399" height="1100">
+        </picture>
         <figcaption class="case-caption">Блоки внутренних страниц были уникальными, но все соблюдали единый стиль компании</figcaption>
       </figure>
       <div class="project__visual project__visual--case project__visual--agency-privacy container">
-        <img src="assets/images/projects/agency/agency-privacy-desktop.png" alt="Политика конфиденциальности FourAgency: десктопная версия" loading="lazy" width="1818" height="3179">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/images/projects/agency/agency-privacy-compact.png">
+          <img src="assets/images/projects/agency/agency-privacy-desktop.png" alt="Политика конфиденциальности FourAgency: десктопная версия" loading="lazy" width="1818" height="3179">
+        </picture>
         <img src="assets/images/projects/agency/agency-privacy-mobile.png" alt="Политика конфиденциальности FourAgency: мобильная версия" loading="lazy" width="1024" height="6498">
       </div>
       <section class="about about--project container" aria-labelledby="results-title">
