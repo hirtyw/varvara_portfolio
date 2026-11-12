@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Лендинг конференции Yandex Pet Day — проект Варвары Кокиной.">
+    <title>Yandex Pet Day — Варвара Кокина</title>
+    <link rel="preload" href="assets/fonts/geist-medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/geist-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
+    <script src="reveal.js" type="module"></script>
+  </head>
+  <body class="intro intro--project">
+    <header class="site-header container">
+      <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+        <span class="identity__portrait">
+          <img src="assets/images/avatar.png" alt="" width="32" height="32">
+        </span>
+        <span>Кокина Варвара</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf" aria-label="Скачать CV Варвары Кокиной в PDF">
+          CV
+        </a>
+        <a class="nav-link" href="./#projects">
+          Все работы
+        </a>
+      </nav>
+      <a class="nav-link" href="https://t.me/hirtyww">
+        Связаться
+      </a>
+      <button class="nav-link menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Меню</span>
+      </button>
+    </header>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню">
+      <nav class="mobile-menu__links" aria-label="Мобильная навигация">
+        <a href="./#projects">+ Все работы</a>
+        <a href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">+ CV</a>
+        <a href="https://t.me/hirtyww">+ Связаться</a>
+      </nav>
+    </dialog>
+    <main>
+      <section class="hero hero--project hero--yandex container" aria-labelledby="project-title">
+        <h1 class="hero__title" id="project-title">Лендинг для конференции Yandex по digital-продуктам в сфере зообизнеса</h1>
+        <dl class="hero__facts">
+          <div class="hero__fact"><dt>Бренд</dt><dd>Yandex</dd></div>
+          <div class="hero__fact"><dt>Тематика</dt><dd>Digital / Зообизнес</dd></div>
+          <div class="hero__fact"><dt>Год</dt><dd>2025</dd></div>
+          <div class="hero__fact"><dt>Сайт</dt><dd><a href="https://yandex-pet-day.vercel.app/">yandex-pet-day.vercel.app</a></dd></div>
+        </dl>
+        <div class="hero__visual">
+          <img src="assets/images/projects/yandex/yandex-cover.png" alt="Первый экран конференции Yandex Pet Day на компьютере и телефоне" fetchpriority="high" width="1198" height="532">
+        </div>
+      </section>
+      <section class="about about--project container" aria-labelledby="company-title">
+        <h2 id="company-title"><span>О компании</span></h2>
+        <div class="about__copy">
+          <p>Яндекс — технологическая компания, развивающая цифровые продукты и сервисы для повседневной жизни. Объединяет экспертизу в области искусственного интеллекта, аналитики и современных технологий, создавая решения для пользователей и бизнеса в различных отраслях.</p>
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case container">
+        <img src="assets/images/projects/yandex/yandex-overview.png" alt="Мобильные экраны конференции: форматы участия, регистрация, программа и спикеры" loading="lazy" width="1200" height="675">
+      </figure>
+      <section class="about about--project container" aria-labelledby="problem-title">
+        <h2 id="problem-title"><span>Проблема</span></h2>
+        <div class="about__copy">
+          <p>Для конференции Yandex Pet Day требовалось разработать лендинг, который познакомит аудиторию с мероприятием, раскроет его ценность и поможет пользователям выбрать удобный формат участия. Важно было объединить большой объём информации в понятную структуру и создать визуальный стиль, соответствующий тематике события.</p>
+          <ul>
+            <li>Разработать выразительную визуальную концепцию с учётом фирменного стиля Яндекса.</li>
+            <li>Продумать структуру страницы и расставить акценты на ключевой информации.</li>
+            <li>Представить программу конференции, спикеров и преимущества участия.</li>
+            <li>Создать удобную форму регистрации с выбором онлайн- или офлайн-формата.</li>
+            <li>Обеспечить понятную навигацию и доступность информации на разных устройствах.</li>
+            <li>Подготовить адаптивные макеты для десктопной и мобильной версий сайта.</li>
+          </ul>
+        </div>
+      </section>
+      <figure class="project__visual project__visual--case project__visual--yandex-map container">
+        <img src="assets/images/projects/yandex/yandex-design-map.png" alt="Макеты лендинга и компоненты в Figma" loading="lazy" width="1222" height="833">
+        <figcaption class="case-caption">Экраны лендинга в Figma: все сделано в компонентах, сверстано и размещено на Vercel</figcaption>
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--yandex-screens container" aria-label="Блок спикеров">
+        <img src="assets/images/projects/yandex/yandex-speakers.png" alt="Спикеры конференции в десктопной версии" loading="lazy" width="934" height="447">
+        <img src="assets/images/projects/yandex/yandex-speakers-mobile.png" alt="Спикеры конференции в мобильной версии" loading="lazy" width="247" height="332">
+      </figure>
+      <figure class="project__visual project__visual--case project__visual--yandex-screens project__visual--yandex-registration container" aria-label="Форма регистрации">
+        <img src="assets/images/projects/yandex/yandex-registration-mobile.png" alt="Мобильная форма регистрации на конференцию" loading="lazy" width="236" height="406">
+        <img src="assets/images/projects/yandex/yandex-registration.png" alt="Десктопная форма регистрации на конференцию" loading="lazy" width="944" height="529">
+      </figure>
+      <section class="about about--project container" aria-labelledby="results-title">
+        <h2 id="results-title"><span>Что получилось</span></h2>
+        <div class="about__copy">
+          <p>В результате был разработан адаптивный лендинг конференции Yandex Pet Day с яркой визуальной концепцией, объединяющей digital-эстетику и pet-тематику.</p>
+          <ul>
+            <li>Разработан узнаваемый графический образ с пиксельным котом в главной роли.</li>
+            <li>Подобрана цветовая палитра и типографика, сочетающиеся со стилем Яндекса.</li>
+            <li>Создана понятная структура с программой, спикерами и информацией о мероприятии.</li>
+            <li>Продумана форма регистрации с выбором онлайн- и офлайн-участия.</li>
+            <li>Разработаны десктопная и мобильная версии сайта.</li>
+            <li>Подготовлена система компонентов для единообразного оформления интерфейса.</li>
+          </ul>
+          <p>В итоге получился современный и дружелюбный интерфейс, который передаёт характер конференции, помогает быстро находить нужную информацию и упрощает запись на мероприятие.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__content container">
+        <a class="identity" href="./" aria-label="Варвара Кокина — главная">
+          <span class="identity__portrait"><img src="assets/images/avatar.png" alt="" width="32" height="32"></span>
+          <span>Кокина Варвара</span>
+        </a>
+        <a class="nav-link" href="assets/documents/Кокина_Варвара_CV.pdf" download="Кокина_Варвара_CV.pdf">CV</a>
+        <a class="site-footer__phone" href="tel:+79101269956">89101269956</a>
+        <a class="site-footer__email" href="mailto:hirtyw@gmail.com">hirtyw@gmail.com</a>
+        <a class="nav-link" href="https://t.me/hirtyww">Связаться</a>
+      </div>
+    </footer>
+  </body>
+</html>

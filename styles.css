@@ -263,8 +263,22 @@ button:focus-visible {
 }
 
 .hero--estes .hero__visual img,
-.hero--agency .hero__visual img {
+.hero--agency .hero__visual img,
+.hero--yandex .hero__visual img {
   margin: 0;
+}
+
+.hero--yandex .hero__title,
+.hero--yandex .hero__fact dd {
+  overflow-wrap: anywhere;
+}
+
+.hero--yandex .hero__facts {
+  flex-wrap: wrap;
+}
+
+.hero--yandex .hero__fact a {
+  text-decoration: underline;
 }
 
 .hero__facts {
@@ -553,6 +567,15 @@ a.project__image { display: block; }
 
 .project__visual--agency-services {
   grid-template-columns: 821.219fr 358fr;
+}
+
+.project__visual--yandex-screens {
+  grid-template-columns: minmax(0, 933.823fr) minmax(0, 246.61fr);
+  align-items: start;
+}
+
+.project__visual--yandex-registration {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 4fr);
 }
 
 .project__visual--agency-workflow {
@@ -898,6 +921,7 @@ a.project__image { display: block; }
   }
 
   .project__visual--pair,
+  .project__visual--yandex-screens,
   .project__visual--agency-services,
   .project__visual--agency-workflow,
   .project__visual--agency-privacy {
@@ -927,14 +951,22 @@ a.project__image { display: block; }
   }
 
   .hero--estes .hero__visual,
-  .hero--agency .hero__visual {
+  .hero--agency .hero__visual,
+  .hero--yandex .hero__visual {
     aspect-ratio: 1198 / 532;
   }
 
   .hero--estes .hero__visual img,
-  .hero--agency .hero__visual img {
+  .hero--agency .hero__visual img,
+  .hero--yandex .hero__visual img {
     width: 100%;
     margin-left: 0;
+  }
+
+  .project__visual--yandex-screens img[src$="-mobile.png"] {
+    width: auto;
+    max-width: 100%;
+    justify-self: center;
   }
 
   .hero--agency {
@@ -966,7 +998,8 @@ a.project__image { display: block; }
     margin-top: var(--space-10);
   }
 
-  .intro--agency .case-caption {
+  .intro--agency .case-caption,
+  .project__visual--yandex-map .case-caption {
     margin: 0;
     padding-inline: var(--page-gutter);
   }
