@@ -530,6 +530,10 @@ a.project__image { display: block; }
   margin-inline: auto;
 }
 
+.project__visual--case:has(> :where(.case-caption)) {
+  row-gap: 0;
+}
+
 .project__visual--case + .project__visual--case {
   margin-top: var(--space-10);
 }
@@ -989,7 +993,8 @@ a.project__image { display: block; }
   }
 
   .intro--agency .project__visual--case,
-  .intro--agency .project__visual--case figure {
+  .intro--agency .project__visual--case figure,
+  .project__visual--yandex-map {
     gap: var(--space-3);
   }
 
