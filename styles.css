@@ -963,10 +963,13 @@ a.project__image { display: block; }
     margin-left: 0;
   }
 
-  .project__visual--yandex-screens img[src$="-mobile.png"] {
-    width: auto;
-    max-width: 100%;
+  .project__visual--yandex-screens img[src$="-mobile@2x.png"] {
+    width: min(100%, 247px);
     justify-self: center;
+  }
+
+  .project__visual--yandex-registration img[src$="-mobile@2x.png"] {
+    width: min(100%, 236px);
   }
 
   .hero--agency {
