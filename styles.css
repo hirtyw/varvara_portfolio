@@ -1328,14 +1328,16 @@ a.project__image { display: block; }
     transform: scale(var(--project-hover-scale));
   }
 
-  .project__copy h3 span {
+  .project__copy h3 span,
+  .about--project h2 span {
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     background: linear-gradient(currentColor, currentColor) left 90% / 0 var(--line-width) no-repeat;
     transition: background-size var(--motion-title-duration) var(--motion-fade-easing);
   }
 
-  .project:hover .project__copy h3 span {
+  .project:hover .project__copy h3 span,
+  .about--project:has(.about__copy:hover) h2 span {
     background-size: 100% var(--line-width);
   }
 
