@@ -277,10 +277,6 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-.hero--yandex .hero__fact a {
-  text-decoration: underline;
-}
-
 .hero__facts {
   display: flex;
   justify-content: space-between;
@@ -303,6 +299,10 @@ button:focus-visible {
 
 .hero__fact dd {
   margin: 0;
+}
+
+.hero__fact a {
+  text-decoration: underline;
 }
 
 .menu-toggle,
@@ -535,7 +535,7 @@ a.project__image { display: block; }
 }
 
 .project__visual--case + .project__visual--case {
-  margin-top: var(--space-10);
+  margin-top: var(--space-15);
 }
 
 .project__visual--case img {
@@ -916,10 +916,6 @@ a.project__image { display: block; }
     width: 100%;
   }
 
-  .project__visual--case + .project__visual--case {
-    margin-top: var(--space-5);
-  }
-
   .about--project + .project__visual--case {
     margin-top: 0;
   }
@@ -955,8 +951,7 @@ a.project__image { display: block; }
   }
 
   .hero--estes .hero__visual,
-  .hero--agency .hero__visual,
-  .hero--yandex .hero__visual {
+  .hero--agency .hero__visual {
     aspect-ratio: 1198 / 532;
   }
 
@@ -967,16 +962,16 @@ a.project__image { display: block; }
     margin-left: 0;
   }
 
-  .project__visual--yandex-screens img[src$="-mobile@2x.png"] {
-    width: min(100%, 247px);
-    justify-self: center;
+  .project__visual--yandex-registration picture:last-child {
+    order: -1;
   }
 
-  .project__visual--yandex-registration img[src$="-mobile@2x.png"] {
-    width: min(100%, 236px);
+  .hero--yandex .hero__visual {
+    aspect-ratio: 354 / 206;
   }
 
-  .hero--agency {
+  .hero--agency,
+  .hero--yandex {
     padding-bottom: var(--section-space);
   }
 
@@ -988,7 +983,8 @@ a.project__image { display: block; }
     aspect-ratio: 354 / 206;
   }
 
-  .hero--agency + .about--project {
+  .hero--agency + .about--project,
+  .hero--yandex + .about--project {
     padding-top: 0;
   }
 
@@ -1000,10 +996,6 @@ a.project__image { display: block; }
 
   .intro--agency .project__visual--case figure {
     display: grid;
-  }
-
-  .intro--agency .project__visual--case + .project__visual--case {
-    margin-top: var(--space-10);
   }
 
   .intro--agency .case-caption,
