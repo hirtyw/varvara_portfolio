@@ -222,7 +222,7 @@
     --experience-heading-leading: 30px;
     --header-offset: 13px;
     --hero-width: 353px;
-    --hero-font-size: clamp(30px, 10.178117vw, var(--text-display-mobile));
+    --hero-font-size: min(36px, 9.16vw);
     --hero-offset: 96px;
     --hero-image-height: auto;
     --motion-hero-duration: 1400ms;

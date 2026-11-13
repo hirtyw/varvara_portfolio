@@ -157,18 +157,8 @@ button:focus-visible {
   color: var(--color-heading-muted);
 }
 
-.hero__statement {
-  margin-top: 3.2px;
-  white-space: nowrap;
-}
-
-.hero__message {
-  display: contents;
-}
-
 .hero__visual {
   position: relative;
-  order: 1;
   display: block;
   height: var(--hero-image-height);
   margin-top: var(--space-4);
@@ -177,6 +167,10 @@ button:focus-visible {
   border: 0;
   background: var(--color-surface);
   cursor: pointer;
+}
+
+button.hero__visual {
+  width: 100%;
 }
 
 .hero__visual:disabled {
@@ -217,11 +211,6 @@ button:focus-visible {
 @keyframes hero-slide-in {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
-}
-
-.hero__ending {
-  order: 2;
-  margin-top: var(--space-4);
 }
 
 .hero--project {
@@ -305,8 +294,7 @@ button:focus-visible {
   text-decoration: underline;
 }
 
-.menu-toggle,
-.hero__period {
+.menu-toggle {
   display: none;
 }
 
@@ -651,9 +639,6 @@ a.project__image { display: block; }
     margin-inline: 0;
   }
 
-  .hero__period {
-    display: inline;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -770,24 +755,6 @@ a.project__image { display: block; }
 
   .hero {
     translate: -1px 0;
-  }
-
-  .hero__message {
-    display: block;
-    margin-top: var(--space-1);
-  }
-
-  .hero__statement {
-    margin-top: 0;
-    white-space: normal;
-  }
-
-  .hero__ending {
-    margin-top: 0;
-  }
-
-  .hero__period {
-    display: none;
   }
 
   .hero__visual {
