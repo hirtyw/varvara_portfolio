@@ -47,27 +47,19 @@
       <p>Я использую Яндекс Метрику, чтобы понимать, как посетители взаимодействуют с сайтом, и улучшать его. Аналитика включается только с вашего согласия.</p>
       <a href="privacy.html">Политика конфиденциальности</a>
     </div>
-    <div class="analytics-consent__actions">
-      <button class="nav-link" type="button" value="allow">Хорошо</button>
-      <button type="button" value="deny">Отклонить</button>
-    </div>
+    <button class="nav-link" type="button">Хорошо</button>
     <p class="analytics-consent__status" role="status"></p>
   `;
   const status = notice.querySelector('[role="status"]');
-  for (const button of notice.querySelectorAll('button')) {
-    button.addEventListener('click', () => {
-      const choice = button.value;
-      try {
-        localStorage.setItem(consentKey, choice);
-      } catch {
-        if (choice === 'allow') {
-          status.textContent = 'Не удалось сохранить выбор. Проверьте настройки хранения данных в браузере.';
-          return;
-        }
-      }
-      notice.remove();
-      if (choice === 'allow') loadMetrika();
-    });
-  }
+  notice.querySelector('button').addEventListener('click', () => {
+    try {
+      localStorage.setItem(consentKey, 'allow');
+    } catch {
+      status.textContent = 'Не удалось сохранить выбор. Проверьте настройки хранения данных в браузере.';
+      return;
+    }
+    notice.remove();
+    loadMetrika();
+  });
   document.body.append(notice);
 })();
