@@ -51,6 +51,7 @@
     <p class="analytics-consent__status" role="status"></p>
   `;
   const status = notice.querySelector('[role="status"]');
+  const dismissTimer = setTimeout(() => notice.remove(), 20_000);
   notice.querySelector('button').addEventListener('click', () => {
     try {
       localStorage.setItem(consentKey, 'allow');
@@ -58,6 +59,7 @@
       status.textContent = 'Не удалось сохранить выбор. Проверьте настройки хранения данных в браузере.';
       return;
     }
+    clearTimeout(dismissTimer);
     notice.remove();
     loadMetrika();
   });
